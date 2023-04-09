@@ -1,4 +1,4 @@
-package com.med.medland.presentation.fragment
+package com.med.medland.presentation.fragment.splashFragment
 
 import android.os.Bundle
 import android.os.CountDownTimer

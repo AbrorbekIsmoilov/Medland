@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.fragment.SplashFragment">
+    tools:context=".presentation.fragment.splashFragment.SplashFragment">
 
     <ImageView
         android:id="@+id/splash_logo"
