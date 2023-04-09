@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.med.medland.presentation.fragment.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_interViewFragment"
+            app:destination="@id/interViewFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/interViewFragment"
+        android:name="com.med.medland.presentation.fragment.interviewFragment.InterViewFragment"
+        android:label="fragment_inter_view"
+        tools:layout="@layout/fragment_inter_view" >
+        <action
+            android:id="@+id/action_interViewFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/interViewFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.med.medland.presentation.fragment.loginFragment.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_signUpOneFragment"
+            app:destination="@id/signUpOneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpOneFragment"
+        android:name="com.med.medland.presentation.fragment.signUpFragment.SignUpOneFragment"
+        android:label="fragment_sign_up_one"
+        tools:layout="@layout/fragment_sign_up_one" >
+        <action
+            android:id="@+id/action_signUpOneFragment_to_signUpTwoFragment"
+            app:destination="@id/signUpTwoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpTwoFragment"
+        android:name="com.med.medland.presentation.fragment.signUpFragment.SignUpTwoFragment"
+        android:label="fragment_sign_up_two"
+        tools:layout="@layout/fragment_sign_up_two" >
+        <action
+            android:id="@+id/action_signUpTwoFragment_to_signUpThreeFragment"
+            app:destination="@id/signUpThreeFragment" />
+        <action
+            android:id="@+id/action_signUpTwoFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpThreeFragment"
+        android:name="com.med.medland.presentation.fragment.signUpFragment.SignUpThreeFragment"
+        android:label="fragment_sign_up_three"
+        tools:layout="@layout/fragment_sign_up_three" >
+        <action
+            android:id="@+id/action_signUpThreeFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_signUpThreeFragment_to_congratulationsFragment"
+            app:destination="@id/congratulationsFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/congratulationsFragment"
+        android:name="com.med.medland.presentation.fragment.signUpFragment.CongratulationsFragment"
+        android:label="fragment_congratulations"
+        tools:layout="@layout/fragment_congratulations" />
+</navigation>

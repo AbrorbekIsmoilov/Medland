@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.fragment.signUpFragment.SignUpOneFragment">
+
+    <ImageView
+        android:id="@+id/sign_up_image_title"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:padding="15dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/heart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sign_up_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gilroy_semibold"
+        android:text="Registration"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/sign_up_image_title"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_image_title"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_image_title" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sign_up_change_image_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="@+id/sign_up_title"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_title"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_title"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sign_up_selected_img_card"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="20dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/sign_up_selected_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/carton_man_image_one" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sign_up_change_img_card"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/sign_up_change_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:src="@drawable/ic_camera" />
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/sign_up_phone_number_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        app:boxBackgroundColor="@null"
+        app:boxBackgroundMode="outline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_change_image_btn">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/sign_up_et_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gilroy_regular"
+            android:hint="Full name"
+            android:inputType="textPersonName"
+            android:paddingStart="60dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/sign_up_ic_person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_person"
+        app:layout_constraintBottom_toBottomOf="@+id/sign_up_phone_number_layout"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_phone_number_layout"
+        app:layout_constraintTop_toTopOf="@+id/sign_up_phone_number_layout" />
+
+    <TextView
+        android:id="@+id/et_brith_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/date_input_background"
+        android:clickable="false"
+        android:fontFamily="@font/gilroy_regular"
+        android:hint="Brith date"
+        android:paddingStart="60dp"
+        android:paddingTop="18dp"
+        android:paddingBottom="18dp"
+        app:layout_constraintEnd_toEndOf="@+id/sign_up_phone_number_layout"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_phone_number_layout"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_phone_number_layout"
+        app:textInputLayoutFocusedRectEnabled="true" />
+
+
+    <ImageView
+        android:id="@+id/sign_up_ic_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_calendar"
+        app:layout_constraintBottom_toBottomOf="@+id/et_brith_date"
+        app:layout_constraintStart_toStartOf="@+id/et_brith_date"
+        app:layout_constraintTop_toTopOf="@+id/et_brith_date" />
+
+    <TextView
+        android:id="@+id/sign_up_gen_man_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/gender_blue_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/gilroy_medium"
+        android:gravity="center"
+        android:paddingStart="50dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="40dp"
+        android:paddingBottom="10dp"
+        android:text="Erkak"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/et_brith_date"
+        app:layout_constraintTop_toBottomOf="@+id/et_brith_date" />
+
+    <ImageView
+        android:id="@+id/gender_man_image"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/man"
+        app:layout_constraintBottom_toBottomOf="@+id/sign_up_gen_man_btn"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_gen_man_btn"
+        app:layout_constraintTop_toTopOf="@+id/sign_up_gen_man_btn" />
+
+    <TextView
+        android:id="@+id/sign_up_gen_girl_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/gender_gray_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/gilroy_medium"
+        android:gravity="center"
+        android:paddingStart="50dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="40dp"
+        android:paddingBottom="10dp"
+        android:text="Ayol"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/sign_up_gen_man_btn"
+        app:layout_constraintTop_toTopOf="@+id/sign_up_gen_man_btn" />
+
+    <ImageView
+        android:id="@+id/gender_girl_image"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/girl"
+        app:layout_constraintBottom_toBottomOf="@+id/sign_up_gen_girl_btn"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_gen_girl_btn"
+        app:layout_constraintTop_toTopOf="@+id/sign_up_gen_girl_btn" />
+
+    <TextView
+        android:id="@+id/sign_up_one_next_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/btn_blue_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/gilroy_bold"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="Next"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/sign_up_three_sign_in_layout"
+        app:layout_constraintEnd_toEndOf="@+id/et_brith_date"
+        app:layout_constraintStart_toStartOf="@+id/et_brith_date" />
+
+    <LinearLayout
+        android:id="@+id/sign_up_three_sign_in_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/sign_up_one_next_btn"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_one_next_btn">
+
+        <TextView
+            android:id="@+id/sign_up_title_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="Already have an account ?" />
+
+        <TextView
+            android:id="@+id/sign_up_sign_in_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/gilroy_bold"
+            android:text="Sign in"
+            android:textColor="@color/blue_btn"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

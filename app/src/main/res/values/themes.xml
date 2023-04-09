@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Medland" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="android:windowLightStatusBar" tools:targetApi="m">@color/black</item>
+    </style>
+</resources>

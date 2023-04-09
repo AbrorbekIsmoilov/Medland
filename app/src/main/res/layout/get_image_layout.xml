@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/image_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/man_image_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageView
+                android:id="@+id/man_image_one"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/white_btn_background"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="5dp"
+                app:srcCompat="@drawable/carton_man_image_one"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageView
+                android:id="@+id/man_image_two"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/white_btn_background"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="5dp"
+                app:srcCompat="@drawable/carton_man_image_two"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageView
+                android:id="@+id/man_image_three"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/white_btn_background"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="5dp"
+                app:srcCompat="@drawable/carton_man_image_three"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/girl_image_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageView
+                android:id="@+id/girl_image_one"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/white_btn_background"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="5dp"
+                app:srcCompat="@drawable/carton_girl_image_one"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageView
+                android:id="@+id/girl_image_two"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/white_btn_background"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="5dp"
+                app:srcCompat="@drawable/carton_girl_image_two"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageView
+                android:id="@+id/girl_image_three"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/white_btn_background"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="5dp"
+                app:srcCompat="@drawable/carton_girl_image_three"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/image_picker_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/image_get_from_camera_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_blue_background"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:minHeight="48dp"
+                android:fontFamily="@font/gilroy_medium"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Camera"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/get_image_ic_camera"
+                android:layout_width="24dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:padding="2.5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_camera"
+                app:tint="@color/white" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/image_get_from_gallery_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_blue_background"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/gilroy_medium"
+                android:minHeight="48dp"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Gallery"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/get_image_ic_gallery"
+                android:layout_width="24dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_gallery"
+                app:tint="@color/white" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</LinearLayout>
