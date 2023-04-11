@@ -179,7 +179,7 @@
             android:layout_weight="1"
             android:fontFamily="@font/gilroy_bold"
             android:text="Sign in"
-            android:textColor="@color/blue_btn"
+            android:textColor="@color/my_blue"
             android:textSize="16sp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

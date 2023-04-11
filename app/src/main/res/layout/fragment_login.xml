@@ -112,7 +112,7 @@
         android:fontFamily="@font/gilroy_bold"
         android:gravity="bottom"
         android:text="Forgot password ?"
-        android:textColor="@color/blue_btn"
+        android:textColor="@color/my_blue"
         app:layout_constraintEnd_toEndOf="@+id/password_layout"
         app:layout_constraintTop_toBottomOf="@+id/password_layout"
         tools:ignore="TouchTargetSizeCheck" />
@@ -162,7 +162,7 @@
         android:focusable="true"
         android:fontFamily="@font/gilroy_bold"
         android:text="Sign up"
-        android:textColor="@color/blue_btn"
+        android:textColor="@color/my_blue"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/login_log_on_guest_btn"

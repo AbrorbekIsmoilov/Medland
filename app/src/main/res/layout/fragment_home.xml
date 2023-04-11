@@ -7,7 +7,7 @@
     tools:context=".presentation.fragment.homeFragment.HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/home_tool_bar_layout"
+        android:id="@+id/layout_home_tool_bar"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,7 +74,7 @@
             android:src="@drawable/indicator_not_active"
             app:layout_constraintEnd_toEndOf="@+id/home_notification_btn"
             app:layout_constraintTop_toTopOf="@+id/home_notification_btn"
-            app:tint="@color/blue_btn" />
+            app:tint="@color/my_blue" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -89,7 +89,7 @@
         app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/home_tool_bar_layout">
+        app:layout_constraintTop_toBottomOf="@+id/layout_home_tool_bar">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -119,6 +119,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_home_viewpager_teo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -133,7 +134,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" >
+            app:layout_constraintTop_toTopOf="parent">
 
         </androidx.viewpager2.widget.ViewPager2>
 
@@ -148,4 +149,133 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/back_categories_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_white_background"
+        android:backgroundTint="#EDE9E9"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="10dp"
+        android:src="@drawable/ic_arrow_left"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_home_viewpager_teo"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/tv_home_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categories"
+        android:textColor="@color/black"
+        android:fontFamily="@font/gilroy_extra_bold"
+        android:textSize="20sp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toTopOf="@id/back_categories_btn"
+        app:layout_constraintBottom_toBottomOf="@id/back_categories_btn"
+        app:layout_constraintStart_toEndOf="@+id/back_categories_btn" />
+
+    <TextView
+        android:id="@+id/btn_home_see_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/gilroy_bold"
+        android:text="See all"
+        android:textColor="@color/my_blue"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_home_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_home_title" />
+
+    <HorizontalScrollView
+        android:id="@+id/layout_home_filter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_home_see_all"
+        app:layout_constraintStart_toStartOf="@+id/tv_home_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_home_title"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/btn_home_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_white_background"
+                android:padding="15dp"
+                android:src="@drawable/ic_filter" />
+
+            <TextView
+                android:id="@+id/btn_home_doctors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/btn_blue_background"
+                android:textColor="@color/white"
+                android:fontFamily="@font/gilroy_medium"
+                android:padding="15dp"
+                android:text="Doctors" />
+
+            <TextView
+                android:id="@+id/btn_home_nurses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/btn_white_background"
+                android:textColor="@color/black"
+                android:fontFamily="@font/gilroy_medium"
+                android:padding="15dp"
+                android:text="Nurses" />
+
+            <TextView
+                android:id="@+id/btn_home_medicines"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/btn_white_background"
+                android:textColor="@color/black"
+                android:fontFamily="@font/gilroy_medium"
+                android:padding="15dp"
+                android:text="Medicines" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/btn_white_background"
+                android:textColor="@color/black"
+                android:fontFamily="@font/gilroy_medium"
+                android:padding="15dp"
+                android:text="Doctors" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_doctors_in_categories"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_home_filter"
+        tools:listitem="@layout/item_doctors_in_categories" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

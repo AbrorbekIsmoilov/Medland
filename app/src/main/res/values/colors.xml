@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="blue_btn">#045AFD</color>
+    <color name="my_blue">#045AFD</color>
     <color name="gender_gray">#DCDCDC</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
