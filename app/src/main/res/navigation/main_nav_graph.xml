@@ -40,6 +40,11 @@
         <action
             android:id="@+id/action_loginFragment_to_signUpOneFragment"
             app:destination="@id/signUpOneFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_patient_nav_graph"
+            app:destination="@id/patient_nav_graph"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/signUpOneFragment"
@@ -84,5 +89,12 @@
         android:id="@+id/congratulationsFragment"
         android:name="com.med.medland.presentation.fragment.signUpFragment.CongratulationsFragment"
         android:label="fragment_congratulations"
-        tools:layout="@layout/fragment_congratulations" />
+        tools:layout="@layout/fragment_congratulations" >
+        <action
+            android:id="@+id/action_congratulationsFragment_to_patient_nav_graph"
+            app:destination="@id/patient_nav_graph"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <include app:graph="@navigation/patient_nav_graph" />
 </navigation>

@@ -1,5 +1,6 @@
 package com.med.medland.presentation.fragment.interviewFragment
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -17,6 +18,7 @@ import com.med.medland.R
 import com.med.medland.databinding.FragmentInterViewBinding
 import com.med.medland.presentation.fragment.interviewFragment.adapter.InterviewAdapter
 import com.med.medland.presentation.fragment.interviewFragment.model.InterviewItemModel
+import com.med.medland.presentation.fragment.otherComponents.MyCustomIndicator
 import java.util.ArrayList
 
 
@@ -24,6 +26,12 @@ class InterViewFragment : Fragment() {
 
     private lateinit var binding: FragmentInterViewBinding
     private var interViewList : ArrayList<InterviewItemModel>? = null
+    private lateinit var myCustomIndicator: MyCustomIndicator
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        myCustomIndicator = MyCustomIndicator(requireContext())
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentInterViewBinding.inflate(inflater, container, false)
@@ -33,13 +41,13 @@ class InterViewFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.interviewViewpager.adapter = getInterviewAdapter()
-        setUpIndicators()
-        setUpCurrentIndicator(0)
+        myCustomIndicator.setUpIndicators(getInterviewAdapter().itemCount, binding.interviewIndicatorLayout, Color.BLACK)
+        myCustomIndicator.setUpCurrentIndicator(0, binding.interviewIndicatorLayout, Color.BLACK)
 
         binding.interviewViewpager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
-                setUpCurrentIndicator(position)
+                myCustomIndicator.setUpCurrentIndicator(position, binding.interviewIndicatorLayout, Color.BLACK)
                 binding.interviewTitle.text = interViewList!![position].title
             }
         })
@@ -60,27 +68,6 @@ class InterViewFragment : Fragment() {
         interViewList?.add(InterviewItemModel("https://images.newindianexpress.com/uploads/user/imagelibrary/2021/10/1/w900X450/TS_rural_hosps-.jpg?w=400&dpr=2.6","Online diagnostika"))
 
         return InterviewAdapter(interViewList!!)
-    }
-
-    private fun setUpIndicators() {
-        val indicators = arrayOfNulls<ImageView>(getInterviewAdapter().itemCount)
-        val layoutParams : LinearLayout.LayoutParams = LinearLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT)
-        layoutParams.setMargins(8,0,8,0)
-        for ( i in indicators.indices) {
-            indicators[i] = ImageView(requireContext())
-            indicators[i]?.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.indicator_not_active))
-            indicators[i]?.layoutParams = layoutParams
-            binding.interviewIndicatorLayout.addView(indicators[i])
-        }
-    }
-
-    private fun setUpCurrentIndicator(index : Int) {
-        val childCount = binding.interviewIndicatorLayout.childCount
-        for ( i in 0 until childCount){
-            val imageView = binding.interviewIndicatorLayout[i] as ImageView
-            if( i == index) imageView.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.indicator_active))
-            else imageView.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.indicator_not_active))
-        }
     }
 
 }
