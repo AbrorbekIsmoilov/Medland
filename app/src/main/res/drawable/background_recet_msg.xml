@@ -1,0 +1,18 @@
+
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/ripple_effect_color">
+
+  <item>
+    <vector
+        android:width="389dp"
+        android:height="70dp"
+        android:viewportWidth="389"
+        android:viewportHeight="70">
+      <path
+          android:pathData="M16,0L373,0A16,16 0,0 1,389 16L389,54A16,16 0,0 1,373 70L16,70A16,16 0,0 1,0 54L0,16A16,16 0,0 1,16 0z"
+          android:fillColor="#EAEAEA"/>
+    </vector>
+  </item>
+</ripple>
+
+

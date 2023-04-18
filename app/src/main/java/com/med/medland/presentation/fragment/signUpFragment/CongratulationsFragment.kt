@@ -28,7 +28,7 @@ class CongratulationsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.congratulationsHomeBtn.setOnClickListener {
-            findNavController().navigate(R.id.action_congratulationsFragment_to_patient_nav_graph)
+            findNavController().navigate(R.id.action_congratulationsFragment_to_patientFragment)
         }
     }
 }

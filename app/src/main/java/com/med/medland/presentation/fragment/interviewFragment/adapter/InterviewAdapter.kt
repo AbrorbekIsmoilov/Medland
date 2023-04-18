@@ -12,7 +12,9 @@ class InterviewAdapter(private val interviewList : List<InterviewItemModel>) :
 
     class ViewHolder(private val binding: ItemInterviewBinding) : RecyclerView.ViewHolder(binding.root) {
         fun onBind(item : InterviewItemModel) {
-            Glide.with(binding.root.context).load(item.image).into(binding.interviewImage)
+            //Glide.with(binding.root.context).load(item.image).into(binding.interviewImage)
+
+            binding.interviewImage.setImageResource(item.image)
         }
     }
 

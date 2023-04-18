@@ -4,8 +4,8 @@
 
     <item>
         <shape>
-            <solid android:color="@color/my_blue"/>
-            <corners android:radius="12dp"/>
+            <solid android:color="@color/blue_color"/>
+            <corners android:radius="30px"/>
         </shape>
     </item>
 

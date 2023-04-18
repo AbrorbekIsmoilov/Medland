@@ -39,11 +39,11 @@ android {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.core:core-ktx:1.10.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.core:core-ktx:1.10.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
@@ -64,4 +64,14 @@ dependencies {
 
     //Circular Image
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //https://stackoverflow.com/questions/43917123/how-to-make-a-squircle-imageview-with-android
+    implementation 'com.github.MicroRJ:Android-Canvas-Squircle:1.0'
+
+    //ShadowLayout
+    implementation("net.orandja.shadowlayout:shadowlayout:1.0.1")
+
+    //PasswordEditText
+    implementation 'com.github.scottyab:showhidepasswordedittext:0.8'
+
 }

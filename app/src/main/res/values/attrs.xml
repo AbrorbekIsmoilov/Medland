@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TextViewOutline">
+        <attr name="outlineSize" format="dimension" />
+        <attr name="outlineColor" format="color|reference" />
+        <attr name="android:shadowRadius" />
+        <attr name="android:shadowDx" />
+        <attr name="android:shadowDy" />
+        <attr name="android:shadowColor" />
+    </declare-styleable>
+
+    <declare-styleable name="SmoothCornersImage">
+        <attr name="smooth_radius" format="integer"/>
+        <attr name="is_square" format="boolean"/>
+    </declare-styleable>
+
+</resources>

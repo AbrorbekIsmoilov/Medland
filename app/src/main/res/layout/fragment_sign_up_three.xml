@@ -134,7 +134,7 @@
             android:gravity="center"
             android:textSize="16sp"
             android:text="1 : 59"
-            android:textColor="@color/my_blue" />
+            android:textColor="@color/blue_color" />
 
         <TextView
             android:id="@+id/sign_up_verification_code_replay"
@@ -144,7 +144,7 @@
             android:background="@drawable/text_lines_bottom"
             android:fontFamily="@font/gilroy_medium"
             android:text="Qaytadan yuborish"
-            android:textColor="@color/my_blue" />
+            android:textColor="@color/blue_color" />
     </LinearLayout>
 
     <TextView
@@ -193,7 +193,7 @@
             android:layout_weight="1"
             android:fontFamily="@font/gilroy_bold"
             android:text="Sign in"
-            android:textColor="@color/my_blue"
+            android:textColor="@color/blue_color"
             android:textSize="16sp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

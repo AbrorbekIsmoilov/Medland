@@ -6,10 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.LinearLayout
-import androidx.core.content.ContextCompat
-import androidx.core.view.get
 import com.med.medland.R
 import com.med.medland.databinding.FragmentHomeBinding
 import com.med.medland.presentation.fragment.homeFragment.adapter.DiscountsViewPagerAdapter
@@ -18,8 +14,6 @@ import com.med.medland.presentation.fragment.homeFragment.adapter.HomeViewPagerT
 import com.med.medland.presentation.fragment.homeFragment.model.DiscountModel
 import com.med.medland.presentation.fragment.homeFragment.model.DoctorsModel
 import com.med.medland.presentation.fragment.homeFragment.model.ViewPagerTwoModel
-import com.med.medland.presentation.fragment.interviewFragment.adapter.InterviewAdapter
-import com.med.medland.presentation.fragment.interviewFragment.model.InterviewItemModel
 import com.med.medland.presentation.fragment.otherComponents.MyCustomIndicator
 import java.util.ArrayList
 
@@ -74,9 +68,9 @@ class HomeFragment : Fragment() {
 
     private fun getDoctorsAdapter() : DoctorsAdapter {
         doctorsList = ArrayList()
-        doctorsList?.add(DoctorsModel(R.drawable.docor_image_one,"Izzatillo Umarov","Online"))
-        doctorsList?.add(DoctorsModel(R.drawable.docor_image_two,"Azamat Botirov","Online"))
-        doctorsList?.add(DoctorsModel(R.drawable.docor_image_three,"Sherali Jo'rayev","Online"))
+        doctorsList?.add(DoctorsModel(R.drawable.doctor_image_one,"Izzatillo Umarov","Online"))
+        doctorsList?.add(DoctorsModel(R.drawable.doctor_image_two,"Azamat Botirov","Online"))
+        doctorsList?.add(DoctorsModel(R.drawable.doctor_image_three,"Sherali Jo'rayev","Online"))
         return DoctorsAdapter(doctorsList!!)
     }
 }

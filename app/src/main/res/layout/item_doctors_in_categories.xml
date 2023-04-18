@@ -22,7 +22,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/docor_image_one" />
+            app:srcCompat="@drawable/doctor_image_one" />
 
         <TextView
             android:id="@+id/tv_name_item_doctor"
@@ -44,7 +44,7 @@
             android:layout_marginStart="5dp"
             android:fontFamily="@font/gilroy_medium"
             android:text="(online)"
-            android:textColor="@color/my_blue"
+            android:textColor="@color/blue_color"
             app:layout_constraintBottom_toBottomOf="@id/tv_name_item_doctor"
             app:layout_constraintStart_toEndOf="@+id/tv_name_item_doctor"
             app:layout_constraintTop_toTopOf="@+id/tv_name_item_doctor" />
@@ -164,7 +164,7 @@
             android:layout_marginEnd="20dp"
             android:fontFamily="@font/gilroy_medium"
             android:text="$36"
-            android:textColor="@color/my_blue"
+            android:textColor="@color/blue_color"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="@+id/tv_languages_item_doctor"
             app:layout_constraintEnd_toEndOf="parent" />

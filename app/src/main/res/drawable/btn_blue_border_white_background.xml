@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
-    android:color="@color/my_blue">
+    android:color="@color/ripple_effect_color">
 
     <item>
-        <shape>
-            <solid android:color="@color/white"/>
-            <corners android:radius="12dp"/>
-            <stroke android:color="@color/my_blue"
-                android:width="1dp"/>
-        </shape>
+        <vector
+            android:width="388dp"
+            android:height="60dp"
+            android:viewportWidth="388"
+            android:viewportHeight="60"
+            >
+            <group>
+                <clip-path
+                    android:pathData="M12 0H376C382.627 0 388 5.37258 388 12V48C388 54.6274 382.627 60 376 60H12C5.37258 60 0 54.6274 0 48V12C0 5.37258 5.37258 0 12 0Z"
+                    />
+                <path
+                    android:pathData="M12 0H376C382.627 0 388 5.37258 388 12V48C388 54.6274 382.627 60 376 60H12C5.37258 60 0 54.6274 0 48V12C0 5.37258 5.37258 0 12 0Z"
+                    android:strokeWidth="2"
+                    android:strokeColor="#045AFD"
+                    />
+            </group>
+        </vector>
     </item>
 
 </ripple>

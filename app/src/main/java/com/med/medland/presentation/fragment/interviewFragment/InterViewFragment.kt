@@ -1,17 +1,11 @@
 package com.med.medland.presentation.fragment.interviewFragment
 
-import android.graphics.Color
 import android.os.Bundle
+import android.util.TypedValue
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.Toast
-import androidx.core.content.ContextCompat
-import androidx.core.view.get
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.med.medland.R
@@ -35,19 +29,34 @@ class InterViewFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentInterViewBinding.inflate(inflater, container, false)
+
+        binding.interviewNextBtn.setTint(4, 90, 253)
+        binding.interviewNextBtn.rectWidth = TypedValue.applyDimension(
+            TypedValue.COMPLEX_UNIT_DIP, 150f,
+            requireContext().resources.displayMetrics
+        )
+        binding.interviewNextBtn.rectHeight = TypedValue.applyDimension(
+            TypedValue.COMPLEX_UNIT_DIP, 60f,
+            requireContext().resources.displayMetrics
+        )
+        binding.interviewNextBtn.roundRadius = TypedValue.applyDimension(
+            TypedValue.COMPLEX_UNIT_DIP, 12f,
+            requireContext().resources.displayMetrics
+        )
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.interviewViewpager.adapter = getInterviewAdapter()
-        myCustomIndicator.setUpIndicators(getInterviewAdapter().itemCount, binding.interviewIndicatorLayout, Color.BLACK)
-        myCustomIndicator.setUpCurrentIndicator(0, binding.interviewIndicatorLayout, Color.BLACK)
+        myCustomIndicator.setUpIndicators(getInterviewAdapter().itemCount, binding.interviewIndicatorLayout, resources.getColor(R.color.gender_gray))
+        myCustomIndicator.setUpCurrentIndicator(0, binding.interviewIndicatorLayout, resources.getColor(R.color.blue_color))
 
         binding.interviewViewpager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
-                myCustomIndicator.setUpCurrentIndicator(position, binding.interviewIndicatorLayout, Color.BLACK)
+                myCustomIndicator.setUpCurrentIndicator(position, binding.interviewIndicatorLayout, resources.getColor(R.color.blue_color))
                 binding.interviewTitle.text = interViewList!![position].title
             }
         })
@@ -63,9 +72,9 @@ class InterViewFragment : Fragment() {
 
     private fun getInterviewAdapter() : InterviewAdapter {
         interViewList = ArrayList()
-        interViewList?.add(InterviewItemModel("https://t3.ftcdn.net/jpg/02/95/51/80/360_F_295518052_aO5d9CqRhPnjlNDTRDjKLZHNftqfsxzI.jpg","Eng yaxshi doktorlar"))
-        interViewList?.add(InterviewItemModel("https://media.istockphoto.com/id/1200980392/photo/medical-concept-of-asian-beautiful-female-doctor-in-white-coat-with-stethoscope-waist-up.jpg?s=612x612&w=0&k=20&c=nD_1Tn11kWcMZwZfnyA-lYAvNKcBeoEK_KLObBnN6Jg=","Eng yaxshi hamshiralar"))
-        interViewList?.add(InterviewItemModel("https://images.newindianexpress.com/uploads/user/imagelibrary/2021/10/1/w900X450/TS_rural_hosps-.jpg?w=400&dpr=2.6","Online diagnostika"))
+        interViewList?.add(InterviewItemModel(R.drawable.interview_one_image,"Eng yaxshi doktorlar"))
+        interViewList?.add(InterviewItemModel(R.drawable.interview_two_image,"Eng yaxshi hamshiralar"))
+        interViewList?.add(InterviewItemModel(R.drawable.interview_three_image,"Online diagnostika"))
 
         return InterviewAdapter(interViewList!!)
     }

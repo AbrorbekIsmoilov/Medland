@@ -34,11 +34,11 @@ class LoginFragment : Fragment() {
         }
 
         binding.loginLogOnGuestBtn.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_patient_nav_graph)
+            findNavController().navigate(R.id.action_loginFragment_to_patientFragment)
         }
 
         binding.loginSignInBtn.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_patient_nav_graph)
+            findNavController().navigate(R.id.action_loginFragment_to_patientFragment)
         }
     }
 }

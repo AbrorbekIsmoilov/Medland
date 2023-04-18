@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/main_background"
     tools:context=".presentation.fragment.loginFragment.LoginFragment">
 
     <ImageView
@@ -20,7 +21,7 @@
         android:id="@+id/login_title_one"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/gilroy_extra_bold"
         android:text="Sign in"
         android:textColor="@color/black"
@@ -29,73 +30,57 @@
         app:layout_constraintStart_toStartOf="@+id/login_image_title"
         app:layout_constraintTop_toBottomOf="@+id/login_image_title" />
 
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
         android:id="@+id/phone_number_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="20dp"
-        app:boxBackgroundColor="@null"
-        app:boxBackgroundMode="outline"
+        android:fontFamily="@font/gilroy_regular"
+        android:background="@drawable/background_input_388_70"
+        android:hint="Telephone number"
+        android:paddingStart="50dp"
+        android:textColorHint="@color/gray_text_color"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_title_one">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_phone_number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/gilroy_regular"
-            android:hint="Telephone number"
-            android:inputType="phone"
-            android:paddingStart="60dp"
-            android:paddingTop="18dp"
-            android:paddingBottom="18dp" />
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintTop_toBottomOf="@+id/login_title_one" />
 
     <ImageView
         android:id="@+id/login_ic_call"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="17dp"
         android:src="@drawable/ic_call"
         app:layout_constraintBottom_toBottomOf="@+id/phone_number_layout"
         app:layout_constraintStart_toStartOf="@+id/phone_number_layout"
         app:layout_constraintTop_toTopOf="@+id/phone_number_layout" />
 
-    <com.google.android.material.textfield.TextInputLayout
+    <com.scottyab.showhidepasswordedittext.ShowHidePasswordEditText
         android:id="@+id/password_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Confirm password"
+        android:fontFamily="@font/gilroy_regular"
+        android:paddingStart="50dp"
+        android:paddingEnd="20dp"
+        app:tint_color="@color/gray_text_color"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        app:boxBackgroundColor="@null"
-        app:boxBackgroundMode="outline"
+        android:inputType="textPassword"
+        android:background="@drawable/background_input_388_70"
+        android:textColorHint="@color/gray_text_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phone_number_layout"
-        app:passwordToggleEnabled="true">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/gilroy_regular"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:paddingStart="60dp"
-            android:paddingTop="18dp"
-            android:paddingBottom="18dp"
-            android:password="true" />
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintTop_toBottomOf="@+id/phone_number_layout" />
 
     <ImageView
         android:id="@+id/login_ic_key"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="17dp"
         android:src="@drawable/ic_key"
         app:layout_constraintBottom_toBottomOf="@+id/password_layout"
         app:layout_constraintStart_toStartOf="@+id/password_layout"
@@ -106,13 +91,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
+        android:foreground="?attr/selectableItemBackground"
         android:background="@drawable/text_lines_bottom"
         android:clickable="true"
         android:focusable="true"
-        android:fontFamily="@font/gilroy_bold"
+        android:fontFamily="@font/gilroy_medium"
+        android:textStyle="bold"
         android:gravity="bottom"
+
         android:text="Forgot password ?"
-        android:textColor="@color/my_blue"
+        android:textSize="18sp"
+        android:textColor="@color/blue_color"
         app:layout_constraintEnd_toEndOf="@+id/password_layout"
         app:layout_constraintTop_toBottomOf="@+id/password_layout"
         tools:ignore="TouchTargetSizeCheck" />
@@ -120,17 +109,19 @@
     <TextView
         android:id="@+id/login_sign_in_btn"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/btn_blue_background"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/background_btn_388_60"
+        android:backgroundTint="@color/blue_color"
         android:clickable="true"
         android:focusable="true"
-        android:fontFamily="@font/gilroy_bold"
+        android:fontFamily="@font/gilroy_regular"
+        android:textStyle="bold"
         android:gravity="center"
         android:padding="15dp"
         android:text="Sign in"
         android:textColor="@color/white"
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/login_forgot_password_btn"
         app:layout_constraintStart_toStartOf="@+id/password_layout"
         app:layout_constraintTop_toBottomOf="@+id/login_forgot_password_btn" />
@@ -138,33 +129,51 @@
     <TextView
         android:id="@+id/login_log_on_guest_btn"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/btn_blue_border_white_background"
         android:clickable="true"
         android:focusable="true"
-        android:fontFamily="@font/gilroy_bold"
+        android:foreground="?attr/selectableItemBackground"
+        android:fontFamily="@font/gilroy_regular"
         android:gravity="center"
+        android:textStyle="bold"
         android:padding="15dp"
         android:text="Log in as a guest"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/login_forgot_password_btn"
         app:layout_constraintStart_toStartOf="@+id/password_layout"
         app:layout_constraintTop_toBottomOf="@+id/login_sign_in_btn" />
 
-    <TextView
-        android:id="@+id/login_sign_up_btn"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:fontFamily="@font/gilroy_bold"
-        android:text="Sign up"
-        android:textColor="@color/my_blue"
-        android:textSize="16sp"
+        android:layout_marginBottom="50dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/login_log_on_guest_btn"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintStart_toStartOf="@+id/login_log_on_guest_btn">
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't you have an account ?"
+            android:textColor="#B9B9B9" />
+
+        <TextView
+            android:id="@+id/login_sign_up_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/gilroy_bold"
+            android:text="Sign up"
+            android:textColor="@color/blue_color"
+            android:textSize="16sp"
+            tools:ignore="TouchTargetSizeCheck" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

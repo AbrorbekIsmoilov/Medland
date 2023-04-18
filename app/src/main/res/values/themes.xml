@@ -5,6 +5,13 @@
 
         <item name="colorOnPrimary">@color/white</item>
 
-        <item name="android:windowLightStatusBar" tools:targetApi="m">@color/black</item>
+        <item name="android:windowLightStatusBar">@color/black</item>
     </style>
+
+    <style name="CanvasStyle" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:alpha">0.9</item>
+    </style>
+
 </resources>

@@ -15,7 +15,7 @@
             android:id="@+id/date_picker"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:calendarTextColor="@color/my_blue"
+            android:calendarTextColor="@color/blue_color"
             android:datePickerMode="spinner"
             android:yearListSelectorColor="@color/black"
             app:offset="3"

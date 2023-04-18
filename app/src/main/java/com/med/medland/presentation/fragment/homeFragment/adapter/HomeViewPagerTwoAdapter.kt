@@ -12,7 +12,7 @@ class HomeViewPagerTwoAdapter(private val itemList : List<ViewPagerTwoModel>) :
 
     class ViewHolder(private val binding: ItemViewPagerTwoInHomeBinding) : RecyclerView.ViewHolder(binding.root) {
         fun onBind(item : ViewPagerTwoModel) {
-            //Glide.with(binding.root.context).load(item.image).into(binding.imageTitleInViewpagerItem)
+            Glide.with(binding.root.context).load(item.image).into(binding.imageTitleInViewpagerItem)
             binding.tvTitleOneInViewpagerItem.text = item.title_one
             binding.tvTitleTwoInViewpagerItem.text = item.title_two
         }

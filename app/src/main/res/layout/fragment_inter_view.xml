@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/main_background"
     tools:context=".presentation.fragment.interviewFragment.InterViewFragment" >
 
     <ImageView
@@ -12,7 +13,7 @@
         android:layout_marginTop="60dp"
         android:layout_marginStart="100dp"
         android:layout_marginEnd="100dp"
-        android:layout_height="60dp"
+        android:layout_height="44dp"
         android:src="@drawable/horizontal_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,9 +22,9 @@
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/interview_viewpager"
         android:layout_width="match_parent"
-        android:layout_height="380dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="10dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
         app:layout_constraintBottom_toTopOf="@+id/interview_indicator_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +34,7 @@
         android:id="@+id/interview_indicator_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="30dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/interview_title"
@@ -44,30 +45,65 @@
         android:id="@+id/interview_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="120dp"
-        android:fontFamily="@font/gilroy_bold"
-        android:text="Eng yaxshi doktorlar"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/interview_next_btn"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/gilroy_medium"
+        android:textStyle="bold"
+        android:text="Eng yaxshi Doktorlar"
+        android:textColor="@color/black_text_color2"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/interview_title_two"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/interview_next_btn"
-        android:layout_width="wrap_content"
+        android:id="@+id/interview_title_two"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="60dp"
+        android:fontFamily="@font/gilroy_medium"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit adipiscing elit."
+        android:gravity="center"
+        android:textColor="@color/gray_text_color"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/interview_next_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/interview_next_layout"
+        android:layout_width="150dp"
+        app:cardCornerRadius="11dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginBottom="40dp"
-        android:paddingStart="30dp"
+        android:paddingStart="50dp"
         android:paddingTop="15dp"
-        android:paddingEnd="30dp"
+        android:paddingEnd="50dp"
         android:paddingBottom="15dp"
-        android:background="@drawable/btn_blue_background"
-        android:fontFamily="@font/gilroy_bold"
-        android:textColor="@color/white"
-        android:text="Oldinga"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.med.medland.presentation.fragment.otherComponents.SuperEllipseSmoothCorners
+            android:id="@+id/interview_next_btn"
+            style="@style/CanvasStyle"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/interview_next_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:fontFamily="@font/gilroy_medium"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="Next" />
+    </androidx.cardview.widget.CardView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

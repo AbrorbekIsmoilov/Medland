@@ -15,35 +15,19 @@
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
+        <Constraint
+            motion:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/constraintLayout"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent" />
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
         <Constraint
-            android:layout_height="80dp"
-            motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintBottom_toTopOf="parent"
-            motion:layout_constraintEnd_toEndOf="parent"
-            android:layout_width="match_parent"
-            android:id="@+id/layout_home_tool_bar" />
-        <Constraint
-            android:layout_height="180dp"
-            motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintBottom_toTopOf="parent"
-            motion:layout_constraintEnd_toEndOf="parent"
-            android:layout_width="match_parent"
-            android:id="@+id/home_discounts_card" />
-        <Constraint
-            android:layout_height="wrap_content"
-            motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintBottom_toTopOf="parent"
-            motion:layout_constraintEnd_toEndOf="parent"
-            android:layout_width="match_parent"
-            android:id="@+id/layout_home_viewpager_teo" />
-        <Constraint
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            motion:layout_constraintTop_toBottomOf="@+id/layout_home_viewpager_teo"
+            motion:layout_constraintTop_toBottomOf="@+id/home_layout"
             android:layout_marginTop="30dp"
             android:id="@+id/back_categories_btn"
             motion:layout_constraintStart_toStartOf="parent" />
@@ -72,5 +56,12 @@
             motion:layout_constraintTop_toBottomOf="@+id/tv_home_title"
             motion:layout_constraintStart_toStartOf="@+id/back_categories_btn"
             android:id="@+id/layout_home_filter" />
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintBottom_toTopOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:id="@+id/home_layout" />
     </ConstraintSet>
 </MotionScene>
