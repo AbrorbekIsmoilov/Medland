@@ -71,7 +71,7 @@ class SignUpOneFragment : Fragment() {
 
 
         binding.etBrithDate.setOnClickListener {
-            datePickerDialog.showCalendarDialog()
+            datePickerDialog.showCalendarDialog(binding.etBrithDate)
         }
 
         binding.signUpSignInBtn.setOnClickListener {

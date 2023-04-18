@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/background_item_in_categories_390_167"
     android:layout_marginStart="20dp"
     android:layout_marginTop="8dp"
     android:layout_marginEnd="20dp"
-    android:layout_marginBottom="8dp"
-    app:cardCornerRadius="10dp">
+    android:layout_marginBottom="8dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/image_item_doctor"
@@ -179,5 +175,4 @@
             app:layout_constraintStart_toStartOf="@+id/layout_status_item_doctor"
             app:layout_constraintTop_toBottomOf="@+id/layout_status_item_doctor"
             app:srcCompat="@drawable/ic_translate" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

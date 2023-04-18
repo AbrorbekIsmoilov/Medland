@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/main_background"
     app:layoutDescription="@xml/fragment_home_scene"
     tools:context=".presentation.fragment.homeFragment.HomeFragment">
 
@@ -18,9 +19,11 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layout_home_tool_bar"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginTop="20dp"
+            android:layout_height="120dp"
+            android:background="@drawable/tool_bar_background"
+            android:paddingTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -30,7 +33,7 @@
                 android:layout_height="50dp"
                 android:layout_marginStart="20dp"
                 android:src="@drawable/man"
-                app:civ_border_color="#FF000000"
+                app:civ_border_color="#3C3C3C"
                 app:civ_border_width="3dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -60,7 +63,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
                     android:fontFamily="@font/gilroy_medium"
-                    android:text="ID : 8088808" />
+                    android:text="ID : 8088808"
+                    android:textColor="@color/gray_text_color" />
             </LinearLayout>
 
             <ImageView
@@ -68,7 +72,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="20dp"
-                android:background="@drawable/btn_white_background"
+                android:background="@drawable/background_square"
                 android:clickable="true"
                 android:focusable="true"
                 android:padding="10dp"
@@ -78,56 +82,54 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-            <ImageView
-                android:id="@+id/have_notification"
-                android:layout_width="6dp"
-                android:layout_height="6dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
                 android:src="@drawable/indicator_not_active"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="3dp"
+                app:civ_circle_background_color="@color/blue_color"
                 app:layout_constraintEnd_toEndOf="@+id/home_notification_btn"
+                app:layout_constraintStart_toEndOf="@+id/home_notification_btn"
                 app:layout_constraintTop_toTopOf="@+id/home_notification_btn"
                 app:tint="@color/blue_color" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/home_discounts_card"
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/home_discounts_layout"
             android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:layout_marginTop="20dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="30dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/layout_home_tool_bar">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/discounts_viewpager"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.viewpager2.widget.ViewPager2
-                    android:id="@+id/discounts_viewpager"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+            <LinearLayout
+                android:id="@+id/home_indicator_layout_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-                <LinearLayout
-                    android:id="@+id/home_indicator_layout_one"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layout_home_viewpager_teo"
@@ -136,7 +138,7 @@
             android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/home_discounts_card">
+            app:layout_constraintTop_toBottomOf="@+id/home_discounts_layout">
 
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/home_viewpager_two"
@@ -164,15 +166,14 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
     <ImageView
         android:id="@+id/back_categories_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/btn_white_background"
-        android:backgroundTint="#EDE9E9"
+        android:background="@drawable/background_square"
+        android:backgroundTint="@color/white"
         android:clickable="true"
         android:focusable="true"
         android:padding="10dp"
@@ -212,87 +213,101 @@
         android:id="@+id/layout_home_filter"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/btn_home_see_all"
+        android:layout_marginTop="30dp"
+        android:scrollbarThumbHorizontal="@color/transparent"
+        app:layout_constraintEnd_toEndOf="@id/btn_home_see_all"
         app:layout_constraintStart_toStartOf="@+id/tv_home_title"
-        app:layout_constraintTop_toBottomOf="@+id/tv_home_title"
-        tools:ignore="SpeakableTextPresentCheck">
+        app:layout_constraintTop_toBottomOf="@+id/tv_home_title">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/btn_home_filter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:id="@+id/btn_filter_categories"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_weight="1"
-                android:background="@drawable/btn_white_background"
+                android:background="@drawable/background_square"
+                android:backgroundTint="@color/white"
                 android:clickable="true"
-                android:focusable="true"
                 android:padding="15dp"
                 android:src="@drawable/ic_filter"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                android:focusable="true"
+                tools:ignore="TouchTargetSizeCheck"
+                app:tint="#888B8B" />
 
-            <TextView
-                android:id="@+id/btn_home_doctors"
+
+            <net.orandja.shadowlayout.ShadowLayout
+                android:paddingStart="1dp"
+                android:paddingEnd="1dp"
+                android:paddingBottom="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/btn_blue_background"
-                android:clickable="true"
-                android:focusable="true"
-                android:fontFamily="@font/gilroy_medium"
-                android:padding="15dp"
-                android:text="Doctors"
-                android:textColor="@color/white"
-                tools:ignore="TouchTargetSizeCheck" />
+                app:shadow_radius="1"
+                app:shadow_x_shift="0.5dp"
+                app:shadow_y_shift="5dp"
+                app:shadow_downscale="3"
+                android:layout_marginStart="20dp"
+                app:shadow_color="@color/shadow_color"
+                app:shadow_with_color="true"
+                app:shadow_with_css_scale="true"
+                app:shadow_with_dpi_scale="true">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/backgound_116_50"
+                    android:backgroundTint="@color/blue_color"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/gilroy_regular"
+                    android:gravity="center"
+                    android:text="Doctors"
+                    android:elevation="300dp"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </net.orandja.shadowlayout.ShadowLayout>
+
+
 
             <TextView
-                android:id="@+id/btn_home_nurses"
-                android:layout_width="wrap_content"
+                android:id="@+id/textView9"
+                android:layout_width="125dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="20dp"
                 android:layout_weight="1"
-                android:background="@drawable/btn_white_background"
+                android:background="@drawable/backgound_116_50"
+                android:backgroundTint="@color/white"
                 android:clickable="true"
                 android:focusable="true"
-                android:fontFamily="@font/gilroy_medium"
-                android:padding="15dp"
+                android:fontFamily="@font/gilroy_regular"
+                android:gravity="center"
                 android:text="Nurses"
-                android:textColor="@color/black"
-                tools:ignore="TouchTargetSizeCheck" />
+                android:textColor="@color/black_text_color1"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/btn_home_medicines"
+                android:id="@+id/textView10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:layout_weight="1"
-                android:background="@drawable/btn_white_background"
+                android:background="@drawable/backgound_116_50"
+                android:backgroundTint="@color/white"
                 android:clickable="true"
                 android:focusable="true"
-                android:fontFamily="@font/gilroy_medium"
-                android:padding="15dp"
+                android:fontFamily="@font/gilroy_regular"
+                android:gravity="center"
                 android:text="Medicines"
-                android:textColor="@color/black"
-                tools:ignore="TouchTargetSizeCheck" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/btn_white_background"
-                android:fontFamily="@font/gilroy_medium"
-                android:padding="15dp"
-                android:text="Doctors"
-                android:clickable="true"
-                android:focusable="true"
-                android:textColor="@color/black" />
+                android:textColor="@color/black_text_color1"
+                android:textSize="15sp"
+                android:textStyle="bold" />
         </LinearLayout>
     </HorizontalScrollView>
 

@@ -11,7 +11,7 @@
         android:id="@+id/sign_up_image_title"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/background_square"
         android:backgroundTint="@color/white"
         android:paddingTop="5dp"
@@ -24,10 +24,10 @@
         android:id="@+id/sign_up_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
         android:fontFamily="@font/gilroy_semibold"
         android:text="Registration"
         android:textColor="@color/black"
-        android:layout_marginTop="80dp"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="@+id/sign_up_image_title"
         app:layout_constraintStart_toStartOf="@+id/sign_up_image_title"
@@ -76,8 +76,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="9dp"
-                android:src="@drawable/ic_camera"
-                app:tint="@color/gray_text_color" />
+                android:tint="@color/gray_text_color"
+                android:src="@drawable/ic_camera" />
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

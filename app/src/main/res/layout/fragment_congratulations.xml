@@ -4,14 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/main_background"
     tools:context=".presentation.fragment.signUpFragment.CongratulationsFragment" >
 
     <ImageView
         android:id="@+id/congratulations_image_title"
-        android:layout_width="wrap_content"
-        android:layout_height="120dp"
-        android:layout_marginTop="20dp"
-        android:padding="15dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/background_square"
+        android:backgroundTint="@color/white"
+        android:paddingTop="5dp"
         android:src="@drawable/heart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,6 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/gilroy_semibold"
+        android:layout_marginTop="70dp"
         android:text="Congratulations !"
         android:textColor="@color/black"
         android:textSize="34sp"
@@ -33,7 +37,7 @@
         android:id="@+id/sign_up_three_title_two"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:ems="15"
         android:fontFamily="@font/gilroy_regular"
         android:gravity="center"
@@ -46,7 +50,7 @@
         android:id="@+id/congratulations_image_title_two"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:src="@drawable/verification_badge"
         app:layout_constraintEnd_toEndOf="@+id/congratulations_text_title"
         app:layout_constraintStart_toStartOf="@+id/congratulations_text_title"
@@ -59,7 +63,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:background="@drawable/btn_blue_background"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/background_btn_388_60"
+        android:backgroundTint="@color/blue_color"
         android:clickable="true"
         android:focusable="true"
         android:fontFamily="@font/gilroy_bold"
@@ -71,7 +77,6 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/congratulations_image_title_two" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

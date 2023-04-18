@@ -1,0 +1,34 @@
+
+
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/ripple_effect_color">
+
+  <item>
+    <vector
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:aapt="http://schemas.android.com/aapt"
+        android:width="298dp"
+        android:height="116dp"
+        android:viewportWidth="298"
+        android:viewportHeight="116"
+        >
+      <group>
+        <clip-path
+            android:pathData="M16 0H282C290.837 0 298 7.16344 298 16V100C298 108.837 290.837 116 282 116H16C7.16344 116 0 108.837 0 100V16C0 7.16344 7.16344 0 16 0Z"
+            />
+        <path
+            android:pathData="M0 0V116H298V0"
+            android:fillColor="#FFFFFF"
+            />
+        <path
+            android:pathData="M16 0H282C290.837 0 298 7.16344 298 16V100C298 108.837 290.837 116 282 116H16C7.16344 116 0 108.837 0 100V16C0 7.16344 7.16344 0 16 0Z"
+            android:strokeWidth="2.8"
+            android:strokeColor="#FFFFFF"
+            />
+      </group>
+    </vector>
+  </item>
+</ripple>
+
+
+

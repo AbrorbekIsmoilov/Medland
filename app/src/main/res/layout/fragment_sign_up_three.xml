@@ -4,13 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/main_background"
     tools:context=".presentation.fragment.signUpFragment.SignUpThreeFragment">
 
     <ImageView
         android:id="@+id/sign_up_three_image_title"
-        android:layout_width="wrap_content"
-        android:layout_height="120dp"
-        android:padding="15dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/background_square"
+        android:backgroundTint="@color/white"
+        android:paddingTop="5dp"
         android:src="@drawable/heart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,6 +24,7 @@
         android:id="@+id/sign_up_three_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
         android:fontFamily="@font/gilroy_semibold"
         android:text="Phone verfication"
         android:textColor="@color/black"
@@ -32,7 +37,7 @@
         android:id="@+id/sign_up_three_title_two"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:ems="15"
         android:fontFamily="@font/gilroy_regular"
         android:gravity="center"
@@ -43,20 +48,23 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:orientation="horizontal"
         android:weightSum="4"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sign_up_three_title_two">
 
         <EditText
             android:id="@+id/verification_code_one"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/gender_gray_background"
+            android:background="@drawable/background_phone_verification"
             android:fontFamily="@font/gilroy_bold"
             android:gravity="center"
             android:inputType="numberSigned"
@@ -69,10 +77,10 @@
 
         <EditText
             android:id="@+id/verification_code_two"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:background="@drawable/gender_gray_background"
+            android:background="@drawable/background_phone_verification"
             android:fontFamily="@font/gilroy_bold"
             android:gravity="center"
             android:inputType="numberSigned"
@@ -85,10 +93,10 @@
 
         <EditText
             android:id="@+id/verification_code_three"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:background="@drawable/gender_gray_background"
+            android:background="@drawable/background_phone_verification"
             android:fontFamily="@font/gilroy_bold"
             android:gravity="center"
             android:inputType="numberSigned"
@@ -101,10 +109,10 @@
 
         <EditText
             android:id="@+id/verification_code_four"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:background="@drawable/gender_gray_background"
+            android:background="@drawable/background_phone_verification"
             android:fontFamily="@font/gilroy_bold"
             android:gravity="center"
             android:inputType="numberSigned"
@@ -121,7 +129,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/sign_up_three_next_btn"
+        android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
@@ -132,9 +140,9 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/gilroy_bold"
             android:gravity="center"
-            android:textSize="16sp"
             android:text="1 : 59"
-            android:textColor="@color/blue_color" />
+            android:textColor="@color/blue_color"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/sign_up_verification_code_replay"
@@ -153,12 +161,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/btn_blue_background"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/background_btn_388_60"
+        android:backgroundTint="@color/blue_color"
         android:fontFamily="@font/gilroy_bold"
         android:gravity="center"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
         android:text="Next"
         android:textColor="@color/white"
         android:textSize="20sp"
@@ -172,7 +179,7 @@
         android:id="@+id/sign_up_three_sign_in_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="50dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/sign_up_three_next_btn"

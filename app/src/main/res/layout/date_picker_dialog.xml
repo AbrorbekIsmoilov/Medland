@@ -27,11 +27,12 @@
         <TextView
             android:id="@+id/set_date_btn"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:background="@drawable/btn_blue_background"
+            android:background="@drawable/background_btn_388_60"
+            android:backgroundTint="@color/blue_color"
             android:clickable="true"
             android:focusable="true"
             android:fontFamily="@font/gilroy_medium"
@@ -45,7 +46,7 @@
         <TextView
             android:id="@+id/cancel_btn"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"

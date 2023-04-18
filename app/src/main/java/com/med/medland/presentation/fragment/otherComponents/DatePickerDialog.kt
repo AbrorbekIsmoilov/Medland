@@ -6,6 +6,8 @@ import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Build
+import android.widget.TextView
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import com.med.medland.databinding.DatePickerDialogBinding
 import com.ozcanalasalvar.library.utils.DateUtils
@@ -16,6 +18,7 @@ class DatePickerDialog(val context : Context) {
 
     private var dialog : Dialog? = null
     private lateinit var binding: DatePickerDialogBinding
+    private var selectedDate : String = ""
 
     private fun createDialog() {
         dialog = Dialog(context)
@@ -27,7 +30,7 @@ class DatePickerDialog(val context : Context) {
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
-    fun showCalendarDialog() {
+    fun showCalendarDialog(tv_date : TextView) {
         if (dialog == null) {
             createDialog()
         }
@@ -41,6 +44,17 @@ class DatePickerDialog(val context : Context) {
 
 
         binding.cancelBtn.setOnClickListener {
+            dismissDialog()
+        }
+
+        binding.datePicker.setDataSelectListener( object : DatePicker.DataSelectListener{
+            override fun onDateSelected(date: Long, day: Int, month: Int, year: Int) {
+                selectedDate = "$day / $month / $year"
+            }
+        })
+
+        binding.setDateBtn.setOnClickListener {
+            tv_date.text = selectedDate
             dismissDialog()
         }
     }

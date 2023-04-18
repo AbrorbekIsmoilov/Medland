@@ -4,13 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/main_background"
     tools:context=".presentation.fragment.signUpFragment.SignUpTwoFragment">
 
     <ImageView
         android:id="@+id/sign_up_two_image_title"
-        android:layout_width="wrap_content"
-        android:layout_height="120dp"
-        android:padding="15dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/background_square"
+        android:backgroundTint="@color/white"
+        android:paddingTop="5dp"
         android:src="@drawable/heart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,36 +26,30 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/gilroy_semibold"
         android:text="Registration"
+        android:layout_marginTop="100dp"
         android:textColor="@color/black"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sign_up_two_image_title" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/sign_up_phone_number_layout"
+    <EditText
+        android:id="@+id/sign_up_phone_number_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="20dp"
-        app:boxBackgroundColor="@null"
-        app:boxBackgroundMode="outline"
+        android:textColorHint="@color/gray_text_color"
+        android:fontFamily="@font/gilroy_regular"
+        android:background="@drawable/background_input_388_70"
+        android:hint="Phone number"
+        android:inputType="phone|numberSigned"
+        android:paddingStart="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_up_two_title">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/sign_up_et_phone_number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/gilroy_regular"
-            android:hint="Phone number"
-            android:inputType="textPersonName"
-            android:paddingStart="60dp"
-            android:paddingTop="18dp"
-            android:paddingBottom="18dp" />
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_two_title"
+        tools:ignore="RtlSymmetry,TextFields" />
 
     <ImageView
         android:id="@+id/sign_up_phone_number"
@@ -59,35 +57,27 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:src="@drawable/ic_call"
-        app:layout_constraintBottom_toBottomOf="@+id/sign_up_phone_number_layout"
-        app:layout_constraintStart_toStartOf="@+id/sign_up_phone_number_layout"
-        app:layout_constraintTop_toTopOf="@+id/sign_up_phone_number_layout" />
+        app:layout_constraintBottom_toBottomOf="@+id/sign_up_phone_number_et"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_phone_number_et"
+        app:layout_constraintTop_toTopOf="@+id/sign_up_phone_number_et" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/sign_up_password_layout"
-        android:layout_width="match_parent"
+    <com.scottyab.showhidepasswordedittext.ShowHidePasswordEditText
+        android:id="@+id/sign_up_password_et"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="10dp"
-        app:boxBackgroundColor="@null"
-        app:boxBackgroundMode="outline"
+        android:background="@drawable/background_input_388_70"
+        android:fontFamily="@font/gilroy_regular"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingStart="60dp"
+        android:layout_marginTop="20dp"
+        android:paddingEnd="20dp"
+        android:textColorHint="@color/gray_text_color"
+        app:layout_constraintEnd_toEndOf="@+id/sign_up_phone_number_et"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_phone_number_et"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_phone_number_et"
         app:passwordToggleEnabled="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_up_phone_number_layout">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/sign_up_et_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/gilroy_regular"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:paddingStart="60dp"
-            android:paddingTop="18dp"
-            android:paddingBottom="18dp" />
-    </com.google.android.material.textfield.TextInputLayout>
+        app:tint_color="@color/gray_text_color"/>
 
     <ImageView
         android:id="@+id/sign_up_password"
@@ -95,35 +85,26 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:src="@drawable/ic_key"
-        app:layout_constraintBottom_toBottomOf="@+id/sign_up_password_layout"
-        app:layout_constraintStart_toStartOf="@+id/sign_up_password_layout"
-        app:layout_constraintTop_toTopOf="@+id/sign_up_password_layout" />
+        app:layout_constraintBottom_toBottomOf="@+id/sign_up_password_et"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_password_et"
+        app:layout_constraintTop_toTopOf="@+id/sign_up_password_et" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/sign_up_confirm_password_layout"
-        android:layout_width="match_parent"
+    <com.scottyab.showhidepasswordedittext.ShowHidePasswordEditText
+        android:id="@+id/sign_up_confirm_password_et"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="10dp"
-        app:boxBackgroundColor="@null"
-        app:boxBackgroundMode="outline"
-        app:passwordToggleEnabled="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_up_password_layout">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/sign_up_et_confirm_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/gilroy_regular"
-            android:hint="Confirm password"
-            android:inputType="textPassword"
-            android:paddingStart="60dp"
-            android:paddingTop="18dp"
-            android:paddingBottom="18dp" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:background="@drawable/background_input_388_70"
+        android:fontFamily="@font/gilroy_regular"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingStart="60dp"
+        android:layout_marginTop="20dp"
+        android:paddingEnd="20dp"
+        android:textColorHint="@color/gray_text_color"
+        app:layout_constraintEnd_toEndOf="@+id/sign_up_password_et"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_password_et"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_password_et"
+        app:tint_color="@color/gray_text_color"/>
 
     <ImageView
         android:id="@+id/sign_up_confirm_password"
@@ -131,34 +112,33 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:src="@drawable/ic_calendar"
-        app:layout_constraintBottom_toBottomOf="@+id/sign_up_confirm_password_layout"
-        app:layout_constraintStart_toStartOf="@+id/sign_up_confirm_password_layout"
-        app:layout_constraintTop_toTopOf="@+id/sign_up_confirm_password_layout" />
+        app:layout_constraintBottom_toBottomOf="@+id/sign_up_confirm_password_et"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_confirm_password_et"
+        app:layout_constraintTop_toTopOf="@+id/sign_up_confirm_password_et" />
 
     <TextView
         android:id="@+id/sign_up_two_next_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/btn_blue_background"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/background_btn_388_60"
+        android:backgroundTint="@color/blue_color"
+        android:clickable="true"
+        android:focusable="true"
         android:fontFamily="@font/gilroy_bold"
         android:gravity="center"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
         android:text="Next"
         android:textColor="@color/white"
         android:textSize="20sp"
-        android:clickable="true"
-        android:focusable="true"
         app:layout_constraintBottom_toTopOf="@+id/sign_up_three_sign_in_layout"
-        app:layout_constraintEnd_toEndOf="@+id/sign_up_confirm_password_layout"
-        app:layout_constraintStart_toStartOf="@+id/sign_up_confirm_password_layout" />
+        app:layout_constraintEnd_toEndOf="@+id/sign_up_confirm_password_et"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_confirm_password_et" />
 
     <LinearLayout
         android:id="@+id/sign_up_three_sign_in_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="50dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/sign_up_two_next_btn"
