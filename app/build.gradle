@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id "kotlin-kapt"
 }
 
 android {
@@ -73,5 +74,37 @@ dependencies {
 
     //PasswordEditText
     implementation 'com.github.scottyab:showhidepasswordedittext:0.8'
+
+    //Hawk cache library
+    implementation "com.orhanobut:hawk:2.0.1"
+
+    //retrofit
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.10"
+
+    //okhttp
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.10'
+
+    //lottie animation
+    implementation 'com.airbnb.android:lottie:5.2.0'
+
+    //Room library
+    kapt("androidx.room:room-compiler:2.5.1")
+    implementation("androidx.room:room-ktx:2.5.1")
+    implementation("androidx.room:room-runtime:2.5.1")
+
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
+
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.6.1"
+
+    // Lifecycles only (without ViewModel or LiveData)
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.6.1"
+
+    implementation 'javax.inject:javax.inject:1'
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
 
 }

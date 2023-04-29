@@ -1,4 +1,4 @@
-package com.med.medland.presentation.fragment.otherComponents
+package com.med.medland.presentation.fragment.otherComponents.dialog
 
 
 import android.app.Dialog

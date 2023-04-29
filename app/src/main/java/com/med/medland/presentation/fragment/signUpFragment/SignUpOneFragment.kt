@@ -1,7 +1,6 @@
 package com.med.medland.presentation.fragment.signUpFragment
 
 import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -12,7 +11,7 @@ import androidx.annotation.RequiresApi
 import androidx.navigation.fragment.findNavController
 import com.med.medland.R
 import com.med.medland.databinding.FragmentSignUpOneBinding
-import com.med.medland.presentation.fragment.otherComponents.DatePickerDialog
+import com.med.medland.presentation.fragment.otherComponents.dialog.DatePickerDialog
 import com.med.medland.presentation.fragment.otherComponents.GetImageBottomSheet
 
 

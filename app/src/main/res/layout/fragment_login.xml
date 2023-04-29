@@ -34,7 +34,7 @@
         app:layout_constraintTop_toBottomOf="@+id/login_image_title" />
 
     <EditText
-        android:id="@+id/phone_number_layout"
+        android:id="@+id/phone_number_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -43,6 +43,7 @@
         android:fontFamily="@font/gilroy_regular"
         android:background="@drawable/background_input_388_70"
         android:hint="Telephone number"
+        android:inputType="phone"
         android:paddingStart="50dp"
         android:textColorHint="@color/gray_text_color"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,12 +57,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
         android:src="@drawable/ic_call"
-        app:layout_constraintBottom_toBottomOf="@+id/phone_number_layout"
-        app:layout_constraintStart_toStartOf="@+id/phone_number_layout"
-        app:layout_constraintTop_toTopOf="@+id/phone_number_layout" />
+        app:layout_constraintBottom_toBottomOf="@+id/phone_number_et"
+        app:layout_constraintStart_toStartOf="@+id/phone_number_et"
+        app:layout_constraintTop_toTopOf="@+id/phone_number_et" />
 
     <com.scottyab.showhidepasswordedittext.ShowHidePasswordEditText
-        android:id="@+id/password_layout"
+        android:id="@+id/password_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Confirm password"
@@ -77,7 +78,7 @@
         android:textColorHint="@color/gray_text_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phone_number_layout" />
+        app:layout_constraintTop_toBottomOf="@+id/phone_number_et" />
 
     <ImageView
         android:id="@+id/login_ic_key"
@@ -85,9 +86,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
         android:src="@drawable/ic_key"
-        app:layout_constraintBottom_toBottomOf="@+id/password_layout"
-        app:layout_constraintStart_toStartOf="@+id/password_layout"
-        app:layout_constraintTop_toTopOf="@+id/password_layout" />
+        app:layout_constraintBottom_toBottomOf="@+id/password_et"
+        app:layout_constraintStart_toStartOf="@+id/password_et"
+        app:layout_constraintTop_toTopOf="@+id/password_et" />
 
     <TextView
         android:id="@+id/login_forgot_password_btn"
@@ -105,8 +106,8 @@
         android:text="Forgot password ?"
         android:textSize="18sp"
         android:textColor="@color/blue_color"
-        app:layout_constraintEnd_toEndOf="@+id/password_layout"
-        app:layout_constraintTop_toBottomOf="@+id/password_layout"
+        app:layout_constraintEnd_toEndOf="@+id/password_et"
+        app:layout_constraintTop_toBottomOf="@+id/password_et"
         tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
@@ -126,7 +127,7 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/login_forgot_password_btn"
-        app:layout_constraintStart_toStartOf="@+id/password_layout"
+        app:layout_constraintStart_toStartOf="@+id/password_et"
         app:layout_constraintTop_toBottomOf="@+id/login_forgot_password_btn" />
 
     <TextView
@@ -146,7 +147,7 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/login_forgot_password_btn"
-        app:layout_constraintStart_toStartOf="@+id/password_layout"
+        app:layout_constraintStart_toStartOf="@+id/password_et"
         app:layout_constraintTop_toBottomOf="@+id/login_sign_in_btn" />
 
     <LinearLayout

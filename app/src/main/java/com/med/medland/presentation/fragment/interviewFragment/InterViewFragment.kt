@@ -9,10 +9,12 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.med.medland.R
+import com.med.medland.data.locale.Constants
 import com.med.medland.databinding.FragmentInterViewBinding
 import com.med.medland.presentation.fragment.interviewFragment.adapter.InterviewAdapter
 import com.med.medland.presentation.fragment.interviewFragment.model.InterviewItemModel
 import com.med.medland.presentation.fragment.otherComponents.MyCustomIndicator
+import com.orhanobut.hawk.Hawk
 import java.util.ArrayList
 
 
@@ -39,10 +41,7 @@ class InterViewFragment : Fragment() {
             TypedValue.COMPLEX_UNIT_DIP, 60f,
             requireContext().resources.displayMetrics
         )
-        binding.interviewNextBtn.roundRadius = TypedValue.applyDimension(
-            TypedValue.COMPLEX_UNIT_DIP, 12f,
-            requireContext().resources.displayMetrics
-        )
+        binding.interviewNextBtn.roundRadius = 0f
 
         return binding.root
     }
@@ -64,6 +63,7 @@ class InterViewFragment : Fragment() {
         binding.interviewNextBtn.setOnClickListener {
             val interviewPosition = binding.interviewViewpager.currentItem
             if ( interviewPosition == getInterviewAdapter().itemCount.dec()){
+                Hawk.put(Constants.WATCH_INTERVIEW, Constants.WATCH_ENDED)
                 findNavController().navigate(R.id.action_interViewFragment_to_loginFragment)
             }
             else binding.interviewViewpager.currentItem = interviewPosition.inc()
