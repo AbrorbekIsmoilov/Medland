@@ -1,0 +1,24 @@
+
+
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/ripple_effect_color">
+
+  <item>
+    <vector
+        android:width="246dp"
+        android:height="60dp"
+        android:viewportWidth="246"
+        android:viewportHeight="60"
+        >
+      <group>
+        <clip-path
+            android:pathData="M8 0H238C242.418 0 246 3.58172 246 8V52C246 56.4183 242.418 60 238 60H8C3.58172 60 0 56.4183 0 52V8C0 3.58172 3.58172 0 8 0Z"
+            />
+        <path
+            android:pathData="M0 0V60H246V0"
+            android:fillColor="#FFFFFF"
+            />
+      </group>
+    </vector>
+  </item>
+</ripple>

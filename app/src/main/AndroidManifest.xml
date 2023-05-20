@@ -10,7 +10,7 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:screenOrientation="portrait"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/medland_logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.Medland"

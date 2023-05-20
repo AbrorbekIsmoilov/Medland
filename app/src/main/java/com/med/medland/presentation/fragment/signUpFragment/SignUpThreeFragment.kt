@@ -33,7 +33,7 @@ class SignUpThreeFragment : Fragment() {
         }
 
         binding.signUpThreeNextBtn.setOnClickListener {
-            findNavController().navigate(R.id.action_signUpThreeFragment_to_congratulationsFragment)
+            findNavController().navigate(R.id.action_signUpThreeFragment_to_pinCodeFragment)
         }
 
         binding.verificationCodeOne.addTextChangedListener {

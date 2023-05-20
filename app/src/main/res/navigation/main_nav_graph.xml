@@ -25,6 +25,11 @@
             app:destination="@id/patientFragment"
             app:popUpTo="@id/splashFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_selectLanguageFragment"
+            app:destination="@id/selectLanguageFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/interViewFragment"
@@ -85,10 +90,8 @@
             app:popUpTo="@id/loginFragment"
             app:popUpToInclusive="true" />
         <action
-            android:id="@+id/action_signUpThreeFragment_to_congratulationsFragment"
-            app:destination="@id/congratulationsFragment"
-            app:popUpTo="@id/loginFragment"
-            app:popUpToInclusive="true" />
+            android:id="@+id/action_signUpThreeFragment_to_pinCodeFragment"
+            app:destination="@id/pinCodeFragment" />
     </fragment>
     <fragment
         android:id="@+id/congratulationsFragment"
@@ -106,4 +109,27 @@
         android:name="com.med.medland.presentation.fragment.patientFragment.PatientFragment"
         android:label="fragment_patient"
         tools:layout="@layout/fragment_patient" />
+    <fragment
+        android:id="@+id/selectLanguageFragment"
+        android:name="com.med.medland.presentation.fragment.selectLanguageFragment.SelectLanguageFragment"
+        android:label="fragment_select_language"
+        tools:layout="@layout/fragment_select_language" >
+        <action
+            android:id="@+id/action_selectLanguageFragment_to_interViewFragment"
+            app:destination="@id/interViewFragment" />
+        <action
+            android:id="@+id/action_selectLanguageFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pinCodeFragment"
+        android:name="com.med.medland.presentation.fragment.pincodeFragment.PinCodeFragment"
+        android:label="fragment_pin_code"
+        tools:layout="@layout/fragment_pin_code" >
+        <action
+            android:id="@+id/action_pinCodeFragment_to_congratulationsFragment"
+            app:destination="@id/congratulationsFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

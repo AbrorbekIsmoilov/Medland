@@ -1,178 +1,222 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/background_item_in_categories_390_167"
     android:layout_marginStart="20dp"
     android:layout_marginTop="8dp"
     android:layout_marginEnd="20dp"
-    android:layout_marginBottom="8dp">
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/background_item_doctors_390_217">
 
 
-        <ImageView
-            android:id="@+id/image_item_doctor"
-            android:layout_width="80dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/image_item_doctor"
+        android:layout_width="80dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/doctor_come_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/doctor_image_one" />
+
+    <TextView
+        android:id="@+id/tv_name_item_doctor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/gilroy_bold"
+        android:text="Izzatillo Umarov"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/online_tv"
+        app:layout_constraintStart_toEndOf="@+id/image_item_doctor"
+        app:layout_constraintTop_toTopOf="@+id/image_item_doctor" />
+
+    <TextView
+        android:id="@+id/online_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/gilroy_regular"
+        android:text="   online"
+        android:textColor="@color/blue_color"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_name_item_doctor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_name_item_doctor"
+        app:layout_constraintTop_toTopOf="@+id/tv_name_item_doctor" />
+
+    <ImageView
+        android:id="@+id/ic_briefcase_item_doctor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_name_item_doctor"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_item_doctor"
+        app:srcCompat="@drawable/ic_briefcase" />
+
+    <ImageView
+        android:id="@+id/ic_briefcase_item_doctor2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_name_item_doctor"
+        app:layout_constraintTop_toBottomOf="@+id/ic_briefcase_item_doctor"
+        app:srcCompat="@drawable/ic_location"
+        app:tint="@color/blue_color" />
+
+    <TextView
+        android:id="@+id/tv_type_clinic_item_doctor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/gilroy_medium"
+        android:text="Andrologist, Urolog, Lor, Terapef"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_briefcase_item_doctor"
+        app:layout_constraintStart_toEndOf="@+id/ic_briefcase_item_doctor"
+        app:layout_constraintTop_toTopOf="@+id/ic_briefcase_item_doctor" />
+
+    <TextView
+        android:id="@+id/tv_type_clinic_item_doctor2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gilroy_medium"
+        android:text="Marg'ilon -> Vatstroy -> Medland"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_briefcase_item_doctor2"
+        app:layout_constraintStart_toStartOf="@+id/tv_type_clinic_item_doctor"
+        app:layout_constraintTop_toTopOf="@+id/ic_briefcase_item_doctor2" />
+
+    <TextView
+        android:id="@+id/tv_worked_time_item_doctor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/gilroy_medium"
+        android:text="10 years exp           09:00-18:00"
+        android:textColor="@color/gray_text_color2"
+        app:layout_constraintStart_toStartOf="@+id/ic_briefcase_item_doctor"
+        app:layout_constraintTop_toBottomOf="@+id/tv_type_clinic_item_doctor2" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_status_item_doctor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_price_item_doctor"
+        app:layout_constraintStart_toStartOf="@+id/tv_worked_time_item_doctor"
+        app:layout_constraintTop_toBottomOf="@+id/tv_worked_time_item_doctor">
+
+        <TextView
+            android:id="@+id/tv_rewiev_count_item_doctor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="36 review"
+            app:layout_constraintBottom_toBottomOf="@+id/layout_stars_item_doctor"
+            app:layout_constraintStart_toEndOf="@+id/layout_stars_item_doctor"
+            app:layout_constraintTop_toTopOf="@+id/layout_stars_item_doctor" />
+
+        <LinearLayout
+            android:id="@+id/layout_stars_item_doctor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/doctor_image_one" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/tv_name_item_doctor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/gilroy_bold"
-            android:text="Izzatillo Umarov"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            app:layout_constraintStart_toEndOf="@+id/image_item_doctor"
-            app:layout_constraintTop_toTopOf="@+id/image_item_doctor" />
-
-        <TextView
-            android:id="@+id/tv_connection_status_item_doctor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:fontFamily="@font/gilroy_medium"
-            android:text="(online)"
-            android:textColor="@color/blue_color"
-            app:layout_constraintBottom_toBottomOf="@id/tv_name_item_doctor"
-            app:layout_constraintStart_toEndOf="@+id/tv_name_item_doctor"
-            app:layout_constraintTop_toTopOf="@+id/tv_name_item_doctor" />
-
-        <ImageView
-            android:id="@+id/ic_briefcase_item_doctor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            app:layout_constraintStart_toStartOf="@+id/tv_name_item_doctor"
-            app:layout_constraintTop_toBottomOf="@+id/tv_name_item_doctor"
-            app:srcCompat="@drawable/ic_briefcase" />
-
-        <TextView
-            android:id="@+id/tv_type_clinic_item_doctor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:fontFamily="@font/gilroy_medium"
-            android:text="Andrologist     MDM Clinic"
-            android:textColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="@+id/ic_briefcase_item_doctor"
-            app:layout_constraintStart_toEndOf="@+id/ic_briefcase_item_doctor"
-            app:layout_constraintTop_toTopOf="@+id/ic_briefcase_item_doctor" />
-
-        <TextView
-            android:id="@+id/tv_worked_time_item_doctor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/gilroy_medium"
-            android:text="10 years exp           09:00-18:00"
-            app:layout_constraintStart_toStartOf="@+id/ic_briefcase_item_doctor"
-            app:layout_constraintTop_toBottomOf="@+id/ic_briefcase_item_doctor" />
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/layout_status_item_doctor"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            app:layout_constraintEnd_toStartOf="@+id/tv_price_item_doctor"
-            app:layout_constraintStart_toStartOf="@+id/tv_worked_time_item_doctor"
-            app:layout_constraintTop_toBottomOf="@+id/tv_worked_time_item_doctor">
-
-            <TextView
-                android:id="@+id/tv_rewiev_count_item_doctor"
+            <ImageView
+                android:id="@+id/image_item_doctor_start_one"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:fontFamily="@font/gilroy_medium"
-                android:text="36 review"
-                app:layout_constraintBottom_toBottomOf="@+id/layout_stars_item_doctor"
-                app:layout_constraintStart_toEndOf="@+id/layout_stars_item_doctor"
-                app:layout_constraintTop_toTopOf="@+id/layout_stars_item_doctor" />
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_full_star" />
 
-            <LinearLayout
-                android:id="@+id/layout_stars_item_doctor"
+            <ImageView
+                android:id="@+id/image_item_doctor_start_one2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_full_star" />
 
-                <ImageView
-                    android:id="@+id/image_item_doctor_start_one"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_full_star" />
+            <ImageView
+                android:id="@+id/image_item_doctor_start_one3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_full_star" />
 
-                <ImageView
-                    android:id="@+id/image_item_doctor_start_one2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_full_star" />
+            <ImageView
+                android:id="@+id/image_item_doctor_start_one4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_full_star" />
 
-                <ImageView
-                    android:id="@+id/image_item_doctor_start_one3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_full_star" />
+            <ImageView
+                android:id="@+id/image_item_doctor_start_one5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_full_star" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <ImageView
-                    android:id="@+id/image_item_doctor_start_one4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_full_star" />
+    <TextView
+        android:id="@+id/tv_languages_item_doctor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/gilroy_medium"
+        android:text="O'zbek - Rus"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_translate_item_doctors"
+        app:layout_constraintEnd_toStartOf="@+id/tv_price_item_doctor"
+        app:layout_constraintStart_toEndOf="@+id/ic_translate_item_doctors"
+        app:layout_constraintTop_toTopOf="@+id/ic_translate_item_doctors" />
 
-                <ImageView
-                    android:id="@+id/image_item_doctor_start_one5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_full_star" />
-            </LinearLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/tv_price_item_doctor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/gilroy_medium"
+        android:text="$36"
+        android:textColor="@color/blue_color"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_languages_item_doctor"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_languages_item_doctor"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:fontFamily="@font/gilroy_medium"
-            android:text="O'zbek - Rus"
-            app:layout_constraintBottom_toBottomOf="@+id/ic_translate_item_doctors"
-            app:layout_constraintEnd_toStartOf="@+id/tv_price_item_doctor"
-            app:layout_constraintStart_toEndOf="@+id/ic_translate_item_doctors"
-            app:layout_constraintTop_toTopOf="@+id/ic_translate_item_doctors" />
+    <ImageView
+        android:id="@+id/ic_translate_item_doctors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/image_item_doctor"
+        app:layout_constraintStart_toStartOf="@+id/layout_status_item_doctor"
+        app:layout_constraintTop_toBottomOf="@+id/layout_status_item_doctor"
+        app:srcCompat="@drawable/ic_translate" />
 
-        <TextView
-            android:id="@+id/tv_price_item_doctor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="20dp"
-            android:fontFamily="@font/gilroy_medium"
-            android:text="$36"
-            android:textColor="@color/blue_color"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_languages_item_doctor"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-        <ImageView
-            android:id="@+id/ic_translate_item_doctors"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/layout_status_item_doctor"
-            app:layout_constraintTop_toBottomOf="@+id/layout_status_item_doctor"
-            app:srcCompat="@drawable/ic_translate" />
+    <TextView
+        android:id="@+id/doctor_come_btn"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/background_input_388_70"
+        android:backgroundTint="#1A045AFD"
+        android:fontFamily="@font/gilroy_bold"
+        android:gravity="center"
+        android:text="Uyga chaqirish"
+        android:textColor="@color/black_text_color1"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

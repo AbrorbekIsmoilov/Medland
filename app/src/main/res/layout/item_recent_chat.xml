@@ -14,7 +14,7 @@
 
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profile_image"
+        android:id="@+id/select_contact_image"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="10dp"
@@ -34,8 +34,8 @@
         android:src="@color/green_color"
         app:civ_border_color="@color/white"
         app:civ_border_width="3dp"
-        app:layout_constraintBottom_toBottomOf="@+id/profile_image"
-        app:layout_constraintEnd_toEndOf="@+id/profile_image" />
+        app:layout_constraintBottom_toBottomOf="@+id/select_contact_image"
+        app:layout_constraintEnd_toEndOf="@+id/select_contact_image" />
 
     <LinearLayout
         android:id="@+id/recent_doctor_tv_layout"
@@ -43,10 +43,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="15dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/profile_image"
+        app:layout_constraintBottom_toBottomOf="@+id/select_contact_image"
         app:layout_constraintEnd_toStartOf="@+id/recent_chat_tv2_layout"
-        app:layout_constraintStart_toEndOf="@+id/profile_image"
-        app:layout_constraintTop_toTopOf="@+id/profile_image">
+        app:layout_constraintStart_toEndOf="@+id/select_contact_image"
+        app:layout_constraintTop_toTopOf="@+id/select_contact_image">
 
         <TextView
             android:id="@+id/recent_doctor_name"

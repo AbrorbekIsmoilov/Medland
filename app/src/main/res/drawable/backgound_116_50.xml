@@ -4,16 +4,21 @@
 
   <item>
 
-
-
     <vector
-        android:width="116dp"
+        android:width="118dp"
         android:height="50dp"
-        android:viewportWidth="116"
-        android:viewportHeight="50">
-      <path
-          android:pathData="M16,0L100,0A16,16 0,0 1,116 16L116,34A16,16 0,0 1,100 50L16,50A16,16 0,0 1,0 34L0,16A16,16 0,0 1,16 0z"
-          android:fillColor="#EAEAEA"/>
+        android:viewportWidth="118"
+        android:viewportHeight="50"
+        >
+      <group>
+        <clip-path
+            android:pathData="M8 0H110C114.418 0 118 3.58172 118 8V42C118 46.4183 114.418 50 110 50H8C3.58172 50 0 46.4183 0 42V8C0 3.58172 3.58172 0 8 0Z"
+            />
+        <path
+            android:pathData="M0 0V50H118V0"
+            android:fillColor="#045AFD"
+            />
+      </group>
     </vector>
   </item>
 </ripple>

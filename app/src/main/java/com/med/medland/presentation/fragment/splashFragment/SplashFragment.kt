@@ -57,8 +57,7 @@ class SplashFragment : Fragment(), ConnectionDialog.RefreshClicked {
             override fun onTick(millisUntilFinished: Long) {}
 
             override fun onFinish() {
-                // goNextPage()
-                findNavController().navigate(R.id.action_splashFragment_to_loginFragment)
+                goNextPage()
             }
         }.start()
     }
@@ -70,13 +69,20 @@ class SplashFragment : Fragment(), ConnectionDialog.RefreshClicked {
                 getToken()
             }
             else {
-                if (Hawk.get<Int>(Constants.WATCH_INTERVIEW) == Constants.WATCH_ENDED)
-                    findNavController().navigate(R.id.action_splashFragment_to_loginFragment)
-                else findNavController().navigate(R.id.action_splashFragment_to_interViewFragment)
+
+                if(Hawk.get(Constants.SELECT_LANGUAGE,0) == Constants.DEFAULT_LANGUAGE){
+                    findNavController().navigate(R.id.action_splashFragment_to_selectLanguageFragment)
+                }
+                else {
+                    if (Hawk.get<Int>(Constants.WATCH_INTERVIEW) == Constants.WATCH_ENDED)
+                        findNavController().navigate(R.id.action_splashFragment_to_loginFragment)
+                    else findNavController().navigate(R.id.action_splashFragment_to_interViewFragment)
+                }
             }
         }
         else connectionDialog.showDialog("",Constants.NO_INTERNET, "")
     }
+
     private fun getToken() {
 
         connectionDialog.dismissDialog()
