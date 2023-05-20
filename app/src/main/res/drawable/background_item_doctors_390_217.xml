@@ -1,0 +1,31 @@
+
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/ripple_effect_color">
+
+  <item>
+
+    <vector
+        android:width="390dp"
+        android:height="217dp"
+        android:viewportWidth="390"
+        android:viewportHeight="217"
+        >
+      <group>
+        <clip-path
+            android:pathData="M16 0H374C382.837 0 390 7.16344 390 16V201C390 209.837 382.837 217 374 217H16C7.16344 217 0 209.837 0 201V16C0 7.16344 7.16344 0 16 0Z"
+            />
+        <path
+            android:pathData="M0 0V217H390V0"
+            android:fillColor="#B3FFFFFF"
+            />
+        <path
+            android:pathData="M16 0H374C382.837 0 390 7.16344 390 16V201C390 209.837 382.837 217 374 217H16C7.16344 217 0 209.837 0 201V16C0 7.16344 7.16344 0 16 0Z"
+            android:strokeWidth="2.8"
+            android:strokeColor="#FFFFFF"
+            />
+      </group>
+    </vector>
+  </item>
+</ripple>
+
+

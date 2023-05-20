@@ -100,4 +100,153 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/background_item_doctors_390_217"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_tool_bar_layout">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_marginStart="15dp"
+                android:drawableStart="@drawable/ic_call"
+                android:drawableTint="@color/blue_color"
+                android:fontFamily="@font/gilroy_medium"
+                android:gravity="center"
+                android:text="  Telefon raqam"
+                android:textColor="@color/black_text_color1"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/profile_call_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_marginEnd="15dp"
+                android:drawableEnd="@drawable/ic_right_arrow"
+                android:drawableTint="#C5C5C5"
+                android:fontFamily="@font/gilroy_bold"
+                android:gravity="center"
+                android:text="+998 91 659 72 36  "
+                android:textColor="@color/black_text_color1"
+                android:textSize="16sp" />
+        </FrameLayout>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="15dp"
+            android:background="?android:attr/listDivider" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_marginStart="15dp"
+                android:drawableStart="@drawable/ic_calendar"
+                android:drawableTint="@color/blue_color"
+                android:fontFamily="@font/gilroy_medium"
+                android:gravity="center"
+                android:text="  Tug'ilgan sanasi"
+                android:textColor="@color/black_text_color1"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/profile_brith_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_marginEnd="15dp"
+                android:drawableEnd="@drawable/ic_right_arrow"
+                android:drawableTint="#C5C5C5"
+                android:fontFamily="@font/gilroy_bold"
+                android:gravity="center"
+                android:text="03.03.1995  "
+                android:textColor="@color/black_text_color1"
+                android:textSize="16sp" />
+        </FrameLayout>
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="15dp"
+            android:background="?android:attr/listDivider" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_marginStart="15dp"
+                android:drawableStart="@drawable/ic_person"
+                android:drawableTint="@color/blue_color"
+                android:fontFamily="@font/gilroy_medium"
+                android:gravity="center"
+                android:text="  Jinsi"
+                android:textColor="@color/black_text_color1"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/profile_gender_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_marginEnd="15dp"
+                android:drawableEnd="@drawable/ic_right_arrow"
+                android:drawableTint="#C5C5C5"
+                android:fontFamily="@font/gilroy_bold"
+                android:gravity="center"
+                android:text="Erkak  "
+                android:textColor="@color/black_text_color1"
+                android:textSize="16sp" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_btn_388_60"
+        android:drawableLeft="@drawable/ic_log_out"
+        android:fontFamily="@font/gilroy_medium"
+        android:gravity="center|start"
+        android:paddingStart="15dp"
+        android:text="   Log out"
+        android:textColor="@color/black_text_color1"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout7"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout7"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

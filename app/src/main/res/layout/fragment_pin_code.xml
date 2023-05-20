@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:gravity="center|top"
+    android:orientation="vertical"
+    tools:context=".presentation.fragment.pincodeFragment.PinCodeFragment">
+
+    <TextView
+        android:id="@+id/pin_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="200dp"
+        android:fontFamily="@font/gilroy_medium"
+        android:text="Enter security code"
+        android:textColor="#090809" />
+
+    <LinearLayout
+        android:id="@+id/pin_code_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/pin_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_circle" />
+
+        <ImageView
+            android:id="@+id/pin_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_circle" />
+
+        <ImageView
+            android:id="@+id/pin_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_circle" />
+
+        <ImageView
+            android:id="@+id/pin_four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_circle" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/pin_num_one"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/background_square"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="#090809"
+            android:textSize="48sp" />
+
+        <TextView
+            android:id="@+id/pin_num_two"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/background_square"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="#090809"
+            android:textSize="48sp" />
+
+        <TextView
+            android:id="@+id/pin_num_three"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/background_square"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="#090809"
+            android:textSize="48sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/pin_num_four"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/background_square"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center"
+            android:text="4"
+            android:textColor="#090809"
+            android:textSize="48sp" />
+
+        <TextView
+            android:id="@+id/pin_num_five"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/background_square"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center"
+            android:text="5"
+            android:textColor="#090809"
+            android:textSize="48sp" />
+
+        <TextView
+            android:id="@+id/pin_num_six"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/background_square"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center"
+            android:text="6"
+            android:textColor="#090809"
+            android:textSize="48sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/pin_num_seven"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+
+            android:background="@drawable/background_square"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center"
+            android:text="7"
+            android:textColor="#090809"
+            android:textSize="48sp" />
+
+        <TextView
+            android:id="@+id/pin_num_eight"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/background_square"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center"
+            android:text="8"
+            android:textColor="#090809"
+            android:textSize="48sp" />
+
+        <TextView
+            android:id="@+id/pin_num_nine"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/background_square"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center"
+            android:text="9"
+            android:textColor="#090809"
+            android:textSize="48sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:weightSum="3"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/background_square"
+            android:backgroundTint="@color/main_background"
+            android:drawableTop="@drawable/ic_finger_print"
+            android:drawableTint="@color/blue_color"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_weight="1"
+            android:fontFamily="@font/gilroy_medium"
+            android:gravity="bottom|center"
+            android:paddingTop="15dp"
+            android:paddingBottom="10dp"
+            android:text="Barmoq izi"
+            android:textColor="@color/blue_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/pin_num_zero"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/background_square"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/gilroy_bold"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="0"
+            android:layout_weight="1"
+            android:textColor="#090809"
+            android:textSize="48sp" />
+
+        <ImageView
+            android:id="@+id/textView19"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|end"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_square"
+            android:backgroundTint="@color/main_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="30dp"
+            android:src="@drawable/ic_pin_x_back"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/gilroy_regular"
+        android:text="Forgot pin code ?"
+        android:textColor="@color/blue_color"
+        android:textStyle="bold" />
+</LinearLayout>

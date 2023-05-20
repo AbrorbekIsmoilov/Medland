@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".presentation.fragment.selectLanguageFragment.SelectLanguageFragment">
+
+    <TextView
+        android:id="@+id/select_language_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/gilroy_regular"
+        android:text="Tilni tanlang"
+        android:textColor="@color/black_text_color2"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/language_uz"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/background_select_language_246_60"
+        android:drawableLeft="@drawable/flag_uzb"
+        android:fontFamily="@font/gilroy_regular"
+        android:gravity="center|start"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:text="     O'zbek tili"
+        android:textColor="@color/black_text_color2"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/language_ru"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_select_language_246_60"
+        android:drawableLeft="@drawable/flag_ru"
+        android:fontFamily="@font/gilroy_regular"
+        android:gravity="center|start"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:text="     Русский"
+        android:textColor="@color/black_text_color2"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/language_en"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_select_language_246_60"
+        android:drawableLeft="@drawable/flag_en"
+        android:fontFamily="@font/gilroy_regular"
+        android:gravity="center"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:text="O'zbek tili"
+        android:textColor="@color/black_text_color2"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

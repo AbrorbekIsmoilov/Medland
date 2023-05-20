@@ -5,7 +5,7 @@
     <item>
         <vector
             android:width="388dp"
-            android:height="70dp"
+            android:height="60dp"
             android:viewportWidth="388"
             android:viewportHeight="70">
             <path

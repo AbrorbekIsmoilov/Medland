@@ -73,7 +73,7 @@
             android:paddingTop="20dp"
             android:paddingEnd="30dp"
             android:paddingBottom="20dp"
-            android:text="-" />
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <EditText
             android:id="@+id/verification_code_two"
@@ -89,7 +89,7 @@
             android:paddingTop="20dp"
             android:paddingEnd="30dp"
             android:paddingBottom="20dp"
-            android:text="-" />
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <EditText
             android:id="@+id/verification_code_three"
@@ -105,7 +105,7 @@
             android:paddingTop="20dp"
             android:paddingEnd="30dp"
             android:paddingBottom="20dp"
-            android:text="-" />
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <EditText
             android:id="@+id/verification_code_four"
@@ -121,7 +121,7 @@
             android:paddingTop="20dp"
             android:paddingEnd="30dp"
             android:paddingBottom="20dp"
-            android:text="-" />
+            tools:ignore="SpeakableTextPresentCheck" />
     </LinearLayout>
 
     <LinearLayout
@@ -145,7 +145,7 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/sign_up_verification_code_replay"
+            android:id="@+id/recovery_code_replay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"

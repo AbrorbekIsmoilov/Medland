@@ -11,11 +11,17 @@ object Constants {
     const val USERNAME = "my_username"
     const val PASSWORD = "my_password"
     const val LOGIN = "app_login"
-    const val LOGGED_IN = 1
     const val NOT_LOGGED_IN = 0
+    const val LOGGED_IN = 1
     const val WATCH_INTERVIEW = "watch_interview"
     const val WATCH_NOT_ENDED = 0
     const val WATCH_ENDED = 1
+    const val SELECT_LANGUAGE = "select_language"
+    const val DEFAULT_LANGUAGE = 0
+    const val UZ_LANGUAGE = 1
+    const val RU_LANGUAGE = 2
+    const val EN_LANGUAGE = 3
+
 
 
     //ConnectionDialog status

@@ -11,16 +11,16 @@
         android:id="@+id/orders_tool_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/tool_bar_background"
         android:paddingTop="40dp"
         android:paddingBottom="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="@drawable/tool_bar_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
 
         <ImageView
-            android:id="@+id/orders_back_btn"
+            android:id="@+id/info_back_btn"
             android:layout_width="46dp"
             android:layout_height="46dp"
             android:layout_gravity="center"
@@ -48,7 +48,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/orders_search_btn"
-            app:layout_constraintStart_toEndOf="@+id/orders_back_btn"
+            app:layout_constraintStart_toEndOf="@+id/info_back_btn"
             app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -71,6 +71,60 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/background_select_category_on_order"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orders_tool_bar_layout">
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="140dp"
+            android:layout_height="46dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_online_doctors"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center"
+            android:text="Shifokorlar"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="140dp"
+            android:layout_height="46dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_online_doctors"
+            android:backgroundTint="@color/transparent"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center"
+            android:text="Hamshiralar"
+            android:textColor="@color/gray_text_color2" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="140dp"
+            android:layout_height="46dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_online_doctors"
+            android:backgroundTint="@color/transparent"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center"
+            android:text="Diagnostika"
+            android:textColor="@color/gray_text_color2" />
+
+    </LinearLayout>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/current_balance_layout"
         android:layout_width="0dp"
@@ -81,7 +135,7 @@
         android:background="@drawable/background_current_balance"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/orders_tool_bar_layout">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
 
         <TextView
             android:id="@+id/textView3"
@@ -115,14 +169,14 @@
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/background_200_50"
+            android:clickable="true"
+            android:focusable="true"
             android:fontFamily="@font/gilroy_medium"
             android:gravity="center"
             android:paddingStart="37dp"
             android:paddingTop="14dp"
             android:paddingEnd="37dp"
             android:paddingBottom="14dp"
-            android:clickable="true"
-            android:focusable="true"
             android:text="Tap to Balance"
             android:textColor="@color/white"
             android:textSize="16sp"
