@@ -1,12 +1,14 @@
 package com.med.medland.data.room.table
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "MyInfoTable")
 data class MyInfoTable(
-    @PrimaryKey(true)
-    val date_of_brith : String,
+    @PrimaryKey(autoGenerate = false)
+    val myId : Int,
+    val date_of_brith : String?,
     val address : String,
     val province_id : Int,
     val phone : Long,
@@ -19,7 +21,7 @@ data class MyInfoTable(
     val id : String,
     val country : String,
     val district_id : Int,
-    val balance : Int,
+    val balance : Double,
     val username : String,
     val online : String
 )

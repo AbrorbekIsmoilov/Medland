@@ -76,8 +76,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="9dp"
-                android:tint="@color/gray_text_color"
-                android:src="@drawable/ic_camera" />
+                android:src="@drawable/ic_camera"
+                app:tint="@color/gray_text_color" />
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -204,7 +204,7 @@
         android:id="@+id/sign_up_one_next_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/background_btn_388_60"
+        android:background="@drawable/background_btn_390_50"
         android:backgroundTint="@color/blue_color"
         android:clickable="true"
         android:focusable="true"
