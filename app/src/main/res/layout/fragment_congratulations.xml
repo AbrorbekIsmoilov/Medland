@@ -64,7 +64,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="100dp"
-        android:background="@drawable/background_btn_388_60"
+        android:background="@drawable/background_btn_390_50"
         android:backgroundTint="@color/blue_color"
         android:clickable="true"
         android:focusable="true"

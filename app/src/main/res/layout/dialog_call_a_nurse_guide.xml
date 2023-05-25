@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <TextView
+        android:id="@+id/call_nurse_guide_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/rectangle_r10"
+        android:fontFamily="@font/gilroy_regular"
+        android:paddingStart="15dp"
+        android:paddingTop="70dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="20dp"
+        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+        android:textColor="@color/black_text_color1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lineHeight="22dp" />
+
+    <TextView
+        android:id="@+id/call_nurse_guide_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/gilroy_bold"
+        android:text="Hamshira chaqirish"
+        android:textColor="@color/black_text_color1"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/call_nurse_guide_text"
+        app:layout_constraintTop_toTopOf="@+id/call_nurse_guide_text" />
+
+    <TextView
+        android:id="@+id/understand_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_btn_390_50"
+        android:fontFamily="@font/gilroy_bold"
+        android:gravity="center"
+        android:text="Tushunarli"
+        android:textColor="@color/black_text_color1"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/call_nurse_guide_text"
+        app:layout_constraintStart_toStartOf="@+id/call_nurse_guide_text"
+        app:layout_constraintTop_toBottomOf="@+id/call_nurse_guide_text" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,17 +10,28 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.coroutineScope
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.med.medland.R
 import com.med.medland.data.api.retrofit.ApiResult.Companion.error
 import com.med.medland.data.api.retrofit.ApiResult.Companion.success
 import com.med.medland.data.locale.Constants
+import com.med.medland.data.room.database.UserDataBase
+import com.med.medland.data.room.table.MyInfoTable
 import com.med.medland.databinding.FragmentLoginBinding
 import com.med.medland.presentation.fragment.loginFragment.model.LoginViewModel
 import com.med.medland.presentation.fragment.otherComponents.connection.ConnectionError
 import com.med.medland.presentation.fragment.otherComponents.connection.ConnectivityManager
 import com.med.medland.presentation.fragment.otherComponents.dialog.ConnectionDialog
+import com.med.medland.presentation.fragment.profileFragment.model.MyInfoModel
 import com.orhanobut.hawk.Hawk
+import kotlinx.coroutines.DelicateCoroutinesApi
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.launch
+import kotlin.coroutines.coroutineContext
 
 
 class LoginFragment : Fragment(), ConnectionDialog.RefreshClicked {
@@ -30,6 +41,7 @@ class LoginFragment : Fragment(), ConnectionDialog.RefreshClicked {
     private lateinit var connectionDialog: ConnectionDialog
     private lateinit var connectivityManager: ConnectivityManager
     private lateinit var connectionError: ConnectionError
+    private lateinit var userDataBase: UserDataBase
     private var isConnected = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,6 +50,7 @@ class LoginFragment : Fragment(), ConnectionDialog.RefreshClicked {
         connectionDialog = ConnectionDialog(requireContext(),this)
         connectivityManager = ConnectivityManager(requireContext())
         connectionError = ConnectionError(requireContext())
+        userDataBase = UserDataBase.getDataBase(requireContext())
 
         initObservers()
     }
@@ -89,9 +102,18 @@ class LoginFragment : Fragment(), ConnectionDialog.RefreshClicked {
 
     }
 
+    @OptIn(DelicateCoroutinesApi::class)
     private fun initObservers() {
 
         connectivityManager.checkConnection()
+
+        GlobalScope.launch(Dispatchers.IO) {
+            userDataBase.myInfoDao().insertMyInfo(
+                MyInfoTable(0, "0", "", 0,
+                    0, "", "", false, false, "",
+                    "", "", "", 0, 0.0, "", "")
+            )
+        }
 
         viewModel.getTokenData.observe(this) { apiResult ->
 
@@ -103,6 +125,7 @@ class LoginFragment : Fragment(), ConnectionDialog.RefreshClicked {
                     Hawk.put(Constants.LOGIN, Constants.LOGGED_IN)
                     Hawk.put(Constants.USERNAME, binding.phoneNumberEt.text.toString())
                     Hawk.put(Constants.PASSWORD, binding.passwordEt.text.toString())
+                    insertUserInfo(apiResult.data!!.user)
                     findNavController().navigate(R.id.action_loginFragment_to_patientFragment)
                 }
                 else {
@@ -124,6 +147,35 @@ class LoginFragment : Fragment(), ConnectionDialog.RefreshClicked {
         }
         else {
             getToken()
+        }
+    }
+
+
+    @OptIn(DelicateCoroutinesApi::class)
+    private fun insertUserInfo(myInfoModel: MyInfoModel) {
+
+        GlobalScope.launch(Dispatchers.IO) {
+            userDataBase.myInfoDao().updateMyInfo(
+                MyInfoTable(
+                    0,
+                    myInfoModel.tugilgan_sana,
+                    myInfoModel.manzil,
+                    myInfoModel.viloyat_id,
+                    myInfoModel.tel,
+                    myInfoModel.karta_raqami,
+                    Hawk.get(Constants.PASSWORD),
+                    myInfoModel.disabled,
+                    myInfoModel.block,
+                    myInfoModel.ism,
+                    myInfoModel.jinsi,
+                    myInfoModel.id,
+                    myInfoModel.mamlakat,
+                    myInfoModel.tuman_id,
+                    myInfoModel.balance,
+                    myInfoModel.username,
+                    myInfoModel.online
+                )
+            )
         }
     }
 }

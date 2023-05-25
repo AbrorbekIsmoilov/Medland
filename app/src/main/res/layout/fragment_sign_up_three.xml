@@ -162,7 +162,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="30dp"
-        android:background="@drawable/background_btn_388_60"
+        android:background="@drawable/background_btn_390_50"
         android:backgroundTint="@color/blue_color"
         android:fontFamily="@font/gilroy_bold"
         android:gravity="center"

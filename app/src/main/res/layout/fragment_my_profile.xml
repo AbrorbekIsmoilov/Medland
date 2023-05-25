@@ -237,7 +237,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:background="@drawable/background_btn_388_60"
+        android:background="@drawable/background_btn_390_50"
         android:drawableLeft="@drawable/ic_log_out"
         android:fontFamily="@font/gilroy_medium"
         android:gravity="center|start"
