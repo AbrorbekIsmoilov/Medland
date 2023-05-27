@@ -9,7 +9,7 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/doctors_tool_bar_layout"
+        android:id="@+id/send_address_tool_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/tool_bar_background"
@@ -21,7 +21,7 @@
 
 
         <ImageView
-            android:id="@+id/doctors_back_btn"
+            android:id="@+id/diagnostic_back_btn"
             android:layout_width="46dp"
             android:layout_height="46dp"
             android:layout_gravity="center"
@@ -39,7 +39,7 @@
 
 
         <TextView
-            android:id="@+id/doctors_tool_bar_title"
+            android:id="@+id/diagnostic_tool_bar_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/gilroy_medium"
@@ -54,7 +54,7 @@
 
 
         <ImageView
-            android:id="@+id/home_notification_btn"
+            android:id="@+id/diagnostic_search_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
@@ -75,9 +75,9 @@
             app:civ_border_color="@color/white"
             app:civ_border_width="3dp"
             app:civ_circle_background_color="@color/blue_color"
-            app:layout_constraintEnd_toEndOf="@+id/home_notification_btn"
-            app:layout_constraintStart_toEndOf="@+id/home_notification_btn"
-            app:layout_constraintTop_toTopOf="@+id/home_notification_btn"
+            app:layout_constraintEnd_toEndOf="@+id/diagnostic_search_btn"
+            app:layout_constraintStart_toEndOf="@+id/diagnostic_search_btn"
+            app:layout_constraintTop_toTopOf="@+id/diagnostic_search_btn"
             app:tint="@color/blue_color" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -92,7 +92,7 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/doctors_tool_bar_layout"
+        app:layout_constraintTop_toBottomOf="@+id/send_address_tool_bar_layout"
         tools:listitem="@layout/item_doctor_filter" />
 
     <FrameLayout
@@ -102,7 +102,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:background="@drawable/background_btn_388_60"
+        android:background="@drawable/background_btn_390_50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/doctors_filter_rv">

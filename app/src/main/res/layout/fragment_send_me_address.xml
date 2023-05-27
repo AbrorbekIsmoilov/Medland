@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.fragment.callDoctorOrNurseFragments.SendMeAddressFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/send_address_tool_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tool_bar_background"
+        android:paddingTop="40dp"
+        android:paddingBottom="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/diagnostic_back_btn"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/background_square"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="12dp"
+            android:src="@drawable/ic_arrow_left"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black_text_color1"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+        <TextView
+            android:id="@+id/diagnostic_tool_bar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="Hamshira chaqirish"
+            android:textColor="@color/black_text_color1"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/send_address_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/gilroy_medium"
+        android:text="Manzilni kiriting"
+        android:textColor="@color/black_text_color1"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/send_address_tool_bar_layout" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/my_current_location_card"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/send_address_title"
+        app:layout_constraintTop_toBottomOf="@+id/send_address_title">
+
+        <ImageView
+            android:id="@+id/my_current_location_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_maps" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/img_background_btn"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center"
+            android:text="Men turgan joyni belgilash"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/send_home_address_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/gilroy_medium"
+        android:text="Manzilni kiriting"
+        android:textColor="@color/black_text_color1"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_current_location_card" />
+
+    <Spinner
+        android:id="@+id/select_region_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/background_spinner_390_50"
+        android:paddingStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/send_home_address_title"
+        app:layout_constraintTop_toBottomOf="@+id/send_home_address_title" />
+
+    <EditText
+        android:id="@+id/et_write_district"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/background_btn_390_50"
+        android:gravity="center|start"
+        android:paddingStart="15dp"
+        android:text="Toshloq"
+        android:fontFamily="@font/gilroy_medium"
+        android:textSize="16sp"
+        android:textColor="@color/black_text_color1"
+        android:hint="Tumaningizni kiriting"
+        android:textColorHint="@color/gray_text_color"
+        app:layout_constraintEnd_toEndOf="@+id/select_region_spinner"
+        app:layout_constraintStart_toStartOf="@+id/select_region_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/select_region_spinner" />
+
+    <EditText
+        android:id="@+id/et_write_street"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_btn_390_50"
+        android:gravity="center|start"
+        android:paddingStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Zarkent QFY - Yangi yo'l MFY"
+        android:fontFamily="@font/gilroy_medium"
+        android:textSize="16sp"
+        android:textColor="@color/black_text_color1"
+        android:hint="Qishlog'ingizni nomi - Mahalla nomi  (Ixtiyoriy)"
+        android:textColorHint="@color/gray_text_color"
+        app:layout_constraintEnd_toEndOf="@+id/select_region_spinner"
+        app:layout_constraintStart_toStartOf="@+id/select_region_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/et_write_district" />
+
+    <EditText
+        android:id="@+id/et_write_home_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_btn_390_50"
+        android:gravity="center|start"
+        android:paddingStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Omad 12 - uy"
+        android:fontFamily="@font/gilroy_medium"
+        android:textSize="16sp"
+        android:textColor="@color/black_text_color1"
+        android:hint="Ko'changiz va uyingiz raqami"
+        android:textColorHint="@color/gray_text_color"
+        app:layout_constraintEnd_toEndOf="@+id/select_region_spinner"
+        app:layout_constraintStart_toStartOf="@+id/select_region_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/et_write_street" />
+
+    <TextView
+        android:id="@+id/send_address_come_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/background_btn_390_50"
+        android:backgroundTint="@color/blue_color"
+        android:fontFamily="@font/gilroy_bold"
+        android:gravity="center"
+        android:text="Chaqirish (16$)"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

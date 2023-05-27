@@ -31,7 +31,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:background="@drawable/background_btn_388_60"
+            android:background="@drawable/background_btn_390_50"
             android:backgroundTint="@color/blue_color"
             android:clickable="true"
             android:focusable="true"

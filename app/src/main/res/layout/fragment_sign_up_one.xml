@@ -204,7 +204,7 @@
         android:id="@+id/sign_up_one_next_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/background_btn_388_60"
+        android:background="@drawable/background_btn_390_50"
         android:backgroundTint="@color/blue_color"
         android:clickable="true"
         android:focusable="true"

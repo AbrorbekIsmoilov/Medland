@@ -14,7 +14,7 @@ data class MyInfoModel(
     val id : String,
     val mamlakat : String,
     val tuman_id : Int,
-    val balance : Int,
+    val balance : Double,
     val username : String,
     val online : String
 )
