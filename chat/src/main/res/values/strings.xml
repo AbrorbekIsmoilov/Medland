@@ -1,0 +1,46 @@
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="user_image">User Image</string>
+    <string name="user_avatar">User avatar</string>
+    <string name="send">Send…</string>
+    <string name="sent">Yuborish</string>
+    <string name="image_send">Image of send</string>
+    <string name="image_back">Image of back</string>
+    <string name="patient_data">Bemor ma’lumotlari</string>
+    <string name="zero">0</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="definition">0-yo\'q; 5-juda kuchli</string>
+    <string name="online">online</string>
+    <string name="offline">offline</string>
+    <string name="image_of_file">Image of file</string>
+    <string name="select">Muolaja turini tanlang</string>
+    <string name="enter">Bemor jinsini kiriting</string>
+    <string name="female">Ayol</string>
+    <string name="male">Erkak</string>
+    <string name="enter_age">Bemor yoshini kiriting</string>
+    <string name="image_of_camera">image of camera</string>
+    <string name="image_of_gallery">image of gallery</string>
+    <string name="image_of_pdf">"image  of pdf "</string>
+    <string name="image_of_mic">image_of_mic</string>
+    <string name="image_of_sent">image of sent message</string>
+    <string name="image_of_download">file of download</string>
+    <string name="image_of_chat">image of chat</string>
+    <string name="invitation_message">Iltimos video chatga qo\'shiling</string>
+    <string name="image_of_denial_btn">image of denial btn</string>
+    <string name="not_found">Ma\'lumot topilmadi</string>
+    <string name="first_question">Sizni nima bezovta qiladi</string>
+    <string name="questions_fab">questions fab</string>
+    <string name="app_logo">app logo</string>
+    <string name="image_of_clear">Image of clear</string>
+    <string name="doctor">Shifokor</string>
+    <string name="diagnostic">Diagnostika</string>
+    <string name="drug">Dori darmon</string>
+    <string name="services">Xizmatlar</string>
+    <string name="other_question">Boshqa savol</string>
+    <string name="start_chat">Yozishmani boshlash</string>
+</resources>

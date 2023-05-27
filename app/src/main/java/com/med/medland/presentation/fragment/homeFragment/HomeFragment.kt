@@ -34,7 +34,7 @@ class HomeFragment : Fragment() {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
 
         binding.discountsViewpager.adapter = getDiscountsAdapter()
-        binding.homeViewpagerTwo.adapter = getViewPagerTwoItem()
+//        binding.homeViewpagerTwo.adapter = getViewPagerTwoItem()
         binding.rvDoctorsInCategories.adapter = getDoctorsAdapter()
 
         return binding.root

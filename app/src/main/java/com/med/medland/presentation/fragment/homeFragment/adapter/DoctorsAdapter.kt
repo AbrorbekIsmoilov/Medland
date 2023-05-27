@@ -14,7 +14,7 @@ class DoctorsAdapter(private val itemList : List<DoctorsModel>) :
         fun onBind(item : DoctorsModel) {
             Glide.with(binding.root.context).load(item.image).into(binding.imageItemDoctor)
             binding.tvNameItemDoctor.text = item.name
-            binding.tvConnectionStatusItemDoctor.text = item.connectionStatus
+//            binding.tvConnectionStatusItemDoctor.text = item.connectionStatus
         }
     }
 

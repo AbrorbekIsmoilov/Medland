@@ -1,0 +1,9 @@
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chatImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contentDescription="@string/image_of_chat"
+    android:adjustViewBounds="true"
+    android:background="#99000000"
+    tools:context="com.crudgroup.chat.presentation.image.ImageFragment" />

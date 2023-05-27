@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="end"
+    android:layout_marginStart="@dimen/_48dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="@drawable/bg_sent_message"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_16dp"
+        android:paddingVertical="@dimen/_8dp">
+
+        <TextView
+            android:id="@+id/sentMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:fontFamily="@font/poppins"
+            android:gravity="start"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sp"
+            tools:text="@tools:sample/last_names" />
+
+        <TextView
+            android:id="@+id/dateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginTop="@dimen/_2dp"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            tools:text="@tools:sample/date/ddmmyy" />
+
+    </LinearLayout>
+
+</FrameLayout>

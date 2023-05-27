@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    tools:showIn="@layout/fragment_chat">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/questionFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/_2dp"
+        android:layout_marginBottom="@dimen/_8dp"
+        android:backgroundTint="#0778F1"
+        android:contentDescription="@string/questions_fab"
+        android:src="@drawable/baseline_question_mark" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/questionsRv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <Button
+        android:id="@+id/startMessageBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16dp"
+        android:backgroundTint="@color/received_message_background_color"
+        android:paddingVertical="@dimen/_16dp"
+        android:text="@string/start_chat"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+</LinearLayout>
