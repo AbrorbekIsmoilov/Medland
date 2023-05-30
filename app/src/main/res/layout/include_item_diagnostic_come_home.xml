@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/my_current_location_card"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/send_address_title"
+        app:layout_constraintTop_toBottomOf="@+id/send_address_title">
+
+        <ImageView
+            android:id="@+id/my_current_location_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_maps" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/img_background_btn"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center"
+            android:text="Men turgan joyni belgilash"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/come_home_firstname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/background_btn_390_50"
+        android:ems="10"
+        android:fontFamily="@font/gilroy_medium"
+        android:hint="Ismingiz"
+        android:inputType="text"
+        android:paddingStart="15dp"
+        android:textColor="@color/black_text_color2"
+        android:textColorHint="@color/gray_text_color2"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/come_home_lastname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/background_btn_390_50"
+        android:ems="10"
+        android:fontFamily="@font/gilroy_medium"
+        android:hint="Familyangiz"
+        android:inputType="text"
+        android:paddingStart="15dp"
+        android:textColor="@color/black_text_color2"
+        android:textColorHint="@color/gray_text_color2"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/come_home_gen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/background_btn_390_50"
+        android:ems="10"
+        android:fontFamily="@font/gilroy_medium"
+        android:hint="Jinsingiz"
+        android:inputType="text"
+        android:paddingStart="15dp"
+        android:textColor="@color/black_text_color2"
+        android:textColorHint="@color/gray_text_color2"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/come_home_age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/background_btn_390_50"
+        android:ems="10"
+        android:fontFamily="@font/gilroy_medium"
+        android:hint="Yoshingiz"
+        android:inputType="numberSigned"
+        android:paddingStart="15dp"
+        android:textColor="@color/black_text_color2"
+        android:textColorHint="@color/gray_text_color2"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/come_home_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/background_btn_390_50"
+        android:ems="10"
+        android:fontFamily="@font/gilroy_medium"
+        android:hint="Shahar"
+        android:paddingStart="15dp"
+        android:textColor="@color/black_text_color2"
+        android:textColorHint="@color/gray_text_color2"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/come_home_street"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/background_btn_390_50"
+        android:ems="10"
+        android:fontFamily="@font/gilroy_medium"
+        android:hint="Ko'cha"
+        android:paddingStart="15dp"
+        android:textColor="@color/black_text_color2"
+        android:textColorHint="@color/gray_text_color2"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/come_home_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/background_btn_390_50"
+        android:ems="10"
+        android:fontFamily="@font/gilroy_medium"
+        android:hint="Uy soni"
+        android:paddingStart="15dp"
+        android:textColor="@color/black_text_color2"
+        android:textColorHint="@color/gray_text_color2"
+        android:textSize="16sp" />
+</LinearLayout>

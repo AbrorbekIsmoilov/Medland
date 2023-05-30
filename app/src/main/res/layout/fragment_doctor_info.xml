@@ -85,7 +85,7 @@
                     android:layout_marginStart="60dp"
                     android:layout_marginEnd="60dp"
                     android:layout_marginBottom="20dp"
-                    android:background="@drawable/rectangle_r10"
+                    android:background="@drawable/rectangle_r14"
                     android:backgroundTint="#4D000000"
                     android:orientation="vertical"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -304,7 +304,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:background="@drawable/rectangle_r10"
+            android:background="@drawable/rectangle_r14"
             app:layout_constraintEnd_toEndOf="@+id/doctor_rating_layout"
             app:layout_constraintStart_toStartOf="@+id/doctor_rating_layout"
             app:layout_constraintTop_toBottomOf="@+id/doctor_rating_layout">
