@@ -5,11 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.med.medland.databinding.FragmentDiagnosticBinding
+import com.med.medland.R
+import com.med.medland.databinding.FragmentDiagnosticTypeBinding
 
-class DiagnosticFragment : Fragment() {
 
-    private lateinit var binding: FragmentDiagnosticBinding
+class DiagnosticTypeFragment : Fragment() {
+
+    private lateinit var binding : FragmentDiagnosticTypeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -5,11 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.med.medland.databinding.FragmentDiagnosticBinding
+import com.med.medland.databinding.FragmentAllDiagnosticsBinding
 
-class DiagnosticFragment : Fragment() {
 
-    private lateinit var binding: FragmentDiagnosticBinding
+class AllDiagnosticsFragment : Fragment() {
+
+    private lateinit var binding: FragmentAllDiagnosticsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,7 +18,7 @@ class DiagnosticFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-
+        binding = FragmentAllDiagnosticsBinding.inflate(inflater, container,false)
         return binding.root
     }
 }

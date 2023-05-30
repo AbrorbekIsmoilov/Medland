@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="20dp"
@@ -22,28 +23,31 @@
 
     <TextView
         android:id="@+id/tv_name_item_doctor"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
         android:fontFamily="@font/gilroy_bold"
         android:text="Izzatillo Umarov"
         android:textColor="@color/black"
         android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/image_item_doctor"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_connection_status_item_doctor"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
         android:fontFamily="@font/gilroy_medium"
         android:text="(online)"
         android:textColor="@color/blue_color"
-        app:layout_constraintBottom_toBottomOf="@id/tv_name_item_doctor"
-        app:layout_constraintStart_toEndOf="@+id/tv_name_item_doctor"
-        app:layout_constraintTop_toTopOf="@+id/tv_name_item_doctor" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_name_item_doctor"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_item_doctor" />
 
     <ImageView
         android:id="@+id/ic_briefcase_item_doctor"
@@ -51,49 +55,41 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="@+id/tv_name_item_doctor"
-        app:layout_constraintTop_toBottomOf="@+id/tv_name_item_doctor"
+        app:layout_constraintTop_toBottomOf="@+id/tv_connection_status_item_doctor"
         app:srcCompat="@drawable/ic_briefcase" />
 
     <TextView
         android:id="@+id/tv_type_clinic_item_doctor"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
+        android:layout_marginEnd="15dp"
         android:fontFamily="@font/gilroy_medium"
         android:text="Andrologist     MDM Clinic"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/ic_briefcase_item_doctor"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ic_briefcase_item_doctor"
         app:layout_constraintTop_toTopOf="@+id/ic_briefcase_item_doctor" />
 
     <TextView
         android:id="@+id/upcoming_time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/background_140_50"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/background_select_language_246_60"
+        android:backgroundTint="#1A045AFD"
+        android:drawableLeft="@drawable/ic_clock"
         android:drawableTint="@color/blue_color"
         android:fontFamily="@font/gilroy_medium"
         android:gravity="center"
-        android:text="Tuesday, 1 - Jan"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="Kelmoqda (taxminan 15 daq.)"
         android:textColor="@color/blue_color"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/ic_briefcase_item_doctor"
-        app:layout_constraintTop_toBottomOf="@+id/tv_type_clinic_item_doctor" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/background_70_50"
-        android:drawableTint="@color/blue_color"
-        android:fontFamily="@font/gilroy_medium"
-        android:gravity="center"
-        android:text="09:12"
-        android:textColor="@color/blue_color"
-        app:layout_constraintBottom_toBottomOf="@+id/upcoming_time"
-        app:layout_constraintStart_toEndOf="@+id/upcoming_time"
         app:layout_constraintTop_toBottomOf="@+id/tv_type_clinic_item_doctor" />
 
     <View
@@ -107,51 +103,26 @@
         app:layout_constraintStart_toStartOf="@+id/image_item_doctor"
         app:layout_constraintTop_toBottomOf="@+id/image_item_doctor" />
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/upcoming_cancel_btn"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp"
-        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:background="@drawable/background_recet_msg"
+        android:backgroundTint="#33E49092"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/gilroy_medium"
+        android:gravity="center"
+        android:text="Cancel"
+        android:textColor="#C53038"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/upcoming_divider"
         app:layout_constraintStart_toStartOf="@+id/upcoming_divider"
-        app:layout_constraintTop_toBottomOf="@+id/upcoming_divider">
-
-        <TextView
-            android:id="@+id/upcoming_cancel_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/background_200_50"
-            android:backgroundTint="#33E49092"
-            android:clickable="true"
-            android:focusable="true"
-            android:fontFamily="@font/gilroy_medium"
-            android:gravity="center"
-            android:text="Cancel"
-            android:textColor="#C53038"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/background_200_50"
-            android:backgroundTint="#3350D33B"
-            android:clickable="true"
-            android:focusable="true"
-            android:fontFamily="@font/gilroy_medium"
-            android:gravity="center"
-            android:text="Reschedule"
-            android:textColor="#50D33B"
-            android:textStyle="bold" />
-
-    </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/upcoming_divider" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-

@@ -3,12 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/main_background"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".presentation.fragment.diagnosticFragments.DiagnosticFragment">
+    android:background="@color/main_background"
+    tools:context=".presentation.fragment.diagnosticFragments.DiagnosticsByTypeFragment">
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/send_address_tool_bar_layout"
+        android:id="@+id/by_type_tool_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/tool_bar_background"
@@ -20,7 +21,7 @@
 
 
         <ImageView
-            android:id="@+id/diagnostic_back_btn"
+            android:id="@+id/by_type_back_btn"
             android:layout_width="46dp"
             android:layout_height="46dp"
             android:layout_gravity="center"
@@ -38,49 +39,75 @@
 
 
         <TextView
-            android:id="@+id/diagnostic_tool_bar_title"
-            android:layout_width="wrap_content"
+            android:id="@+id/by_type_tool_bar_title"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/gilroy_medium"
-            android:text="Meridian Cilinc"
+            android:gravity="center"
+            android:text="Labaratoriya diagnostikasi"
             android:textColor="@color/black_text_color1"
             android:textSize="22sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/diagnostic_info_btn"
-            app:layout_constraintStart_toEndOf="@+id/diagnostic_back_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/by_type_back_btn"
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <ImageView
-            android:id="@+id/diagnostic_info_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="20dp"
-            android:background="@drawable/background_square"
-            android:clickable="true"
-            android:focusable="true"
-            android:padding="15dp"
-            android:src="@drawable/ic_info_circle"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/selected_inspections_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/gilroy_bold"
+        android:text="[ Usul bo’yicha diagnostika ], [ Xirurgiya ], [ Quloq og'rishi ]"
+        android:textColor="@color/black_text_color2"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/by_type_tool_bar_layout" />
+
+    <View
+        android:id="@+id/inspection_by_type_line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="@+id/selected_inspections_tv"
+        app:layout_constraintStart_toStartOf="@+id/selected_inspections_tv"
+        app:layout_constraintTop_toBottomOf="@+id/selected_inspections_tv" />
+
+    <TextView
+        android:id="@+id/by_type_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/gilroy_bold"
+        android:text="Mavjud diagnostiklar"
+        android:textColor="@color/black_text_color2"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inspection_by_type_line" />
 
 
     <FrameLayout
         android:id="@+id/search_layout"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/background_btn_390_50"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/send_address_tool_bar_layout">
+        app:layout_constraintEnd_toEndOf="@+id/by_type_title"
+        app:layout_constraintStart_toStartOf="@+id/by_type_title"
+        app:layout_constraintTop_toBottomOf="@+id/by_type_title">
 
         <ImageView
             android:id="@+id/sear_icn"
@@ -105,30 +132,14 @@
             android:textSize="14sp" />
     </FrameLayout>
 
-    <TextView
-        android:id="@+id/diagnostics_types_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:fontFamily="@font/gilroy_medium"
-        android:text="Diagnostika turlari"
-        android:textColor="@color/black_text_color1"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/diagnostic_info_btn"
-        app:layout_constraintStart_toStartOf="@+id/search_layout"
-        app:layout_constraintTop_toBottomOf="@+id/search_layout" />
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/diagnostics_types_rv"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/diagnostics_types_title"
-        tools:listitem="@layout/item_diagnostic_type" />
-
+        app:layout_constraintTop_toBottomOf="@+id/search_layout"
+        tools:listitem="@layout/item_diagnostics" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

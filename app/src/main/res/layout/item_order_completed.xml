@@ -15,7 +15,7 @@
         android:layout_width="80dp"
         android:layout_height="0dp"
         android:layout_marginStart="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintBottom_toBottomOf="@+id/upcoming_time"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_name_item_doctor"
         app:srcCompat="@drawable/doctor_image_one" />
@@ -67,7 +67,7 @@
         app:layout_constraintTop_toTopOf="@+id/ic_briefcase_item_doctor" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/upcoming_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -96,9 +96,9 @@
         android:gravity="center"
         android:text="Completed"
         android:textColor="#50D33B"
-        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintBottom_toBottomOf="@+id/upcoming_time"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toEndOf="@+id/upcoming_time"
         app:layout_constraintTop_toBottomOf="@+id/tv_type_clinic_item_doctor" />
 
 

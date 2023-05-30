@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_item_doctors_390_217">
+
+    <TextView
+        android:id="@+id/diagnostic_upcoming_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/gilroy_bold"
+        android:text="Differensial diagnostika"
+        android:textColor="@color/black_text_color2"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/diagnostic_upcoming_hospital_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/ic_hospital"
+        android:drawableTint="@color/blue_color"
+        android:fontFamily="@font/gilroy_medium"
+        android:gravity="center"
+        android:text="   Merediyan Clinic"
+        android:textColor="@color/black_text_color2"
+        app:layout_constraintStart_toStartOf="@+id/diagnostic_upcoming_name"
+        app:layout_constraintTop_toBottomOf="@+id/diagnostic_upcoming_name" />
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/background_btn_390_50"
+        android:backgroundTint="#D9F4D6"
+        android:drawableStart="@drawable/ic_calendar"
+        android:drawableTint="@color/black_text_color2"
+        android:fontFamily="@font/gilroy_medium"
+        android:gravity="center"
+        android:paddingStart="15dp"
+        android:text="Nabatingiz 20.12.2023  kun soat 12:10 da "
+        android:textColor="@color/black_text_color2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/diagnostic_upcoming_hospital_name"
+        app:layout_constraintTop_toBottomOf="@+id/diagnostic_upcoming_hospital_name" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="#E2ECFD"
+        app:layout_constraintEnd_toEndOf="@+id/textView33"
+        app:layout_constraintStart_toStartOf="@+id/textView33"
+        app:layout_constraintTop_toBottomOf="@+id/textView33" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/background_btn_390_50"
+        android:backgroundTint="#33E49092"
+        android:fontFamily="@font/gilroy_bold"
+        android:gravity="center"
+        android:text="Cancel"
+        android:textColor="#C53038"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/divider4"
+        app:layout_constraintStart_toStartOf="@+id/divider4"
+        app:layout_constraintTop_toBottomOf="@+id/divider4" />
+</androidx.constraintlayout.widget.ConstraintLayout>
