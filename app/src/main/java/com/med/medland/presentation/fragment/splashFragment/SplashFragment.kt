@@ -107,6 +107,7 @@ class SplashFragment : Fragment(), ConnectionDialog.RefreshClicked {
                 if (apiResult.response?.code() == 200) {
                     Log.d(Constants.SPLASH_FRAGMENT, "get token response code : ${apiResult.response.code()}")
                     Hawk.put(Constants.TOKEN, it?.access_token)
+                    Log.e("TAG", "initObservers: ${it?.access_token}", )
                     findNavController().navigate(R.id.action_splashFragment_to_patientFragment)
                 }
                 else {

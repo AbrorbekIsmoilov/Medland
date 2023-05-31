@@ -8,7 +8,7 @@ import com.orhanobut.hawk.Hawk
 
 class ApplicationController : Application() {
 
-    private val appComponent: AppComponent by lazy {
+    val appComponent: AppComponent by lazy {
         DaggerAppComponent.builder()
             .application(application = this)
             .context(context = applicationContext)
