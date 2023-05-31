@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/_48dp"
+    android:background="@drawable/bg_received_message"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/_4dp">
+
+        <TextView
+            android:id="@+id/receivedPdfTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_5dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sp" />
+
+        <ImageView
+            android:id="@+id/receivedPdfIv"
+            android:layout_width="@dimen/_30dp"
+            android:layout_height="@dimen/_40dp"
+            android:src="@drawable/ic_arrow_downward" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dateTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginHorizontal="@dimen/_12dp"
+        android:layout_marginVertical="@dimen/_2dp"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        tools:text="@tools:sample/date/ddmmyy" />
+
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_0dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_message"
+    android:padding="@dimen/_4dp"
+    android:orientation="vertical"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    tools:showIn="@layout/fragment_chat">
+
+    <FrameLayout
+        android:id="@+id/editLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/editTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/_30dp"
+            android:textSize="13sp"
+            android:visibility="visible"
+            android:textColor="@color/dark_gray"
+            app:drawableStartCompat="@drawable/baseline_edit"
+            tools:text="@tools:sample/full_names" />
+
+        <ImageView
+            android:id="@+id/clearIv"
+            android:layout_width="@dimen/_30dp"
+            android:layout_height="@dimen/_30dp"
+            android:layout_gravity="end"
+            android:contentDescription="@string/image_of_clear"
+            android:src="@drawable/baseline_close"
+            android:visibility="visible" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/sendFileBtn"
+            android:layout_width="@dimen/_60dp"
+            android:layout_height="@dimen/_60dp"
+            android:layout_gravity="start"
+            android:background="@null"
+            android:contentDescription="@string/image_of_file"
+            android:padding="@dimen/_8dp"
+            android:src="@drawable/ic_attach_file" />
+
+        <EditText
+            android:id="@+id/messageEt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60dp"
+            android:layout_marginHorizontal="@dimen/_60dp"
+            android:background="@null"
+            android:hint="@string/send"
+            android:inputType="textLongMessage|textMultiLine"
+            android:padding="5dp"
+            android:autofillHints="name" />
+
+        <ImageView
+            android:id="@+id/sendIv"
+            android:layout_width="@dimen/_60dp"
+            android:layout_height="@dimen/_60dp"
+            android:layout_gravity="end"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="@string/image_send"
+            android:focusable="true"
+            android:padding="@dimen/_12dp"
+            android:src="@drawable/ic_send" />
+
+    </FrameLayout>
+
+</LinearLayout>

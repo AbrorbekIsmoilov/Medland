@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/_48dp"
+    android:background="@drawable/bg_received_message"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/receivedImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginHorizontal="@dimen/_12dp"
+        android:layout_marginTop="@dimen/_8dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/image_of_sent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/dateTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginHorizontal="@dimen/_12dp"
+        android:layout_marginBottom="@dimen/_2dp"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        tools:text="@tools:sample/date/ddmmyy" />
+
+</LinearLayout>

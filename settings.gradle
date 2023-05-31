@@ -2,6 +2,7 @@ pluginManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url 'https://jitpack.io' }
         gradlePluginPortal()
 
     }
@@ -16,3 +17,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Medland"
 include ':app'
+include ':data'
+include ':chat'

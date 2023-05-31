@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="online_color">#00A3FF</color>
+    <color name="received_message_background_color">#DBEAF9</color>
+    <color name="received_message_text_color">#383737</color>
+    <color name="sent_message_background_color">#673AB7</color>
+    <color name="sent_btn_color">#00A3FF</color>
+    <color name="chat_fragment_background_color">#F2F2F2</color>
+    <color name="user_name_color">#262626</color>
+    <color name="job_title_color">#5F5F5FC9</color>
+    <color name="online_text_color">#50D33B</color>
+    <color name="color_gray">#F0F0F0</color>
+    <color name="dark_gray">#747474</color>
+    <color name="ripple_effect_color">#B7D0D1</color>
+    <color name="light_btn">#F1F6F8</color>
+</resources>

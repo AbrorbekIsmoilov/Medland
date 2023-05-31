@@ -5,18 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_background"
-    tools:context=".presentation.fragment.chatFragment.ChatFragment">
+    tools:context=".presentation.fragment.chat.ChatFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <View
         android:id="@+id/chat_tool_bar_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_70dp"
         android:paddingTop="40dp"
         android:paddingBottom="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@drawable/tool_bar_background"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"/>
 
 
         <ImageView
@@ -30,12 +30,11 @@
             android:focusable="true"
             android:padding="12dp"
             android:src="@drawable/ic_arrow_left"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/chat_tool_bar_layout"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:tint="@color/black_text_color1"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
 
         <TextView
             android:id="@+id/textView"
@@ -46,11 +45,10 @@
             android:textColor="@color/black_text_color1"
             android:textSize="22sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/chat_tool_bar_layout"
             app:layout_constraintEnd_toStartOf="@+id/chat_search_btn"
             app:layout_constraintStart_toEndOf="@+id/chat_back_btn"
             app:layout_constraintTop_toTopOf="parent" />
-
 
         <ImageView
             android:id="@+id/chat_search_btn"
@@ -63,62 +61,50 @@
             android:focusable="true"
             android:padding="13dp"
             android:src="@drawable/ic_search"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/chat_tool_bar_layout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:tint="@color/black_text_color1"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/online_doctors_layout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chat_tool_bar_layout">
 
         <TextView
             android:id="@+id/online_doctors_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="@dimen/_8dp"
             android:fontFamily="@font/gilroy_medium"
             android:text="My online doctors"
             android:textColor="@color/black_text_color1"
             android:textSize="17sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/chat_tool_bar_layout"  />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/online_doctors_rv"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:orientation="horizontal"
             tools:listitem="@layout/item_online_doctors"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/online_doctors_title" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/recent_chat_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="@dimen/_12dp"
         android:fontFamily="@font/gilroy_medium"
         android:text="Recent chat"
         android:textColor="@color/black_text_color1"
         android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/online_doctors_layout" />
+        app:layout_constraintTop_toBottomOf="@+id/online_doctors_rv" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recent_chats_rv"
@@ -131,4 +117,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recent_chat_title"
         tools:listitem="@layout/item_recent_chat" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
