@@ -11,15 +11,15 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.med.medland.R
-import com.med.medland.data.api.retrofit.ApiResult.Companion.error
-import com.med.medland.data.api.retrofit.ApiResult.Companion.success
+import com.med.medland.data.api.retrofitCreate.ApiResult.Companion.error
+import com.med.medland.data.api.retrofitCreate.ApiResult.Companion.success
 import com.med.medland.data.locale.Constants
 import com.med.medland.databinding.FragmentSplashBinding
 import com.med.medland.presentation.fragment.loginFragment.model.LoginViewModel
+import com.med.medland.presentation.fragment.otherComponents.MyCustomSnackBar
 import com.med.medland.presentation.fragment.otherComponents.connection.ConnectionError
 import com.med.medland.presentation.fragment.otherComponents.connection.ConnectivityManager
 import com.med.medland.presentation.fragment.otherComponents.dialog.ConnectionDialog
-import com.med.medland.presentation.fragment.splashFragment.model.SplashViewModel
 import com.orhanobut.hawk.Hawk
 
 
@@ -111,18 +111,20 @@ class SplashFragment : Fragment(), ConnectionDialog.RefreshClicked {
                 }
                 else {
                     Log.e(Constants.SPLASH_FRAGMENT, "get token response code : ${apiResult.response?.code()}")
+                    Toast.makeText(requireContext(), "So'rov bo'yicha xatolik mavjud, qayta kirib ko'ring", Toast.LENGTH_SHORT).show()
                     findNavController().navigate(R.id.action_splashFragment_to_loginFragment)
                 }
             }
 
             apiResult.error {
-                connectionError.checkConnectionError(apiResult.error, connectionDialog, "", Constants.SPLASH_FRAGMENT)
+                Toast.makeText(requireContext(), "Malumotlaringiz topilmadi, qayta kirib ko'ring", Toast.LENGTH_SHORT).show()
                 Log.e(Constants.SPLASH_FRAGMENT, "get token on failure localizedMessage : ${it?.localizedMessage}")
+                findNavController().navigate(R.id.action_splashFragment_to_loginFragment)
             }
         }
     }
 
     override fun connectDialogRefreshClicked(refreshType: String) {
-        goNextPage()
+
     }
 }

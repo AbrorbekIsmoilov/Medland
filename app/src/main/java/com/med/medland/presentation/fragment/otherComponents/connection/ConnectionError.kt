@@ -3,7 +3,7 @@ package com.med.medland.presentation.fragment.otherComponents.connection
 import android.annotation.SuppressLint
 import android.content.Context
 import android.util.Log
-import com.med.medland.data.api.retrofit.RetrofitInstance
+import com.med.medland.data.api.retrofitCreate.RetrofitInstance
 import com.med.medland.data.locale.Constants
 import com.med.medland.presentation.fragment.otherComponents.dialog.ConnectionDialog
 import okhttp3.ResponseBody
@@ -25,18 +25,18 @@ class ConnectionError(val context: Context) {
     }
 
     @SuppressLint("LongLogTag")
-    fun checkConnectionError(t: Throwable?, connectionDialog : ConnectionDialog, refreshType : String, tag : String){
+    fun checkConnectionError(t: Throwable?, connectionDialog : ConnectionDialog, refreshType : String, tag : String, myErrorMessage : String?){
         when (t) {
             is HttpException -> {
-                Log.d("$tag connection error : ", t.response().toString())
+                Log.e("$tag  error : ", t.response().toString() +"\n Message : ${t.response()?.errorBody()?.string()}")
 
                 val errorMassage = parseError(t.response()?.errorBody())
 
-                if (errorMassage.isEmpty()) { connectionDialog.showDialog(refreshType, Constants.IS_NOT_CHECKED,"So'rov bilan xatolik mavjud !!") }
+                if (errorMassage.isEmpty()) { connectionDialog.showDialog(refreshType, Constants.IS_NOT_CHECKED,"So'rov bilan xatolik mavjud-1 !!") }
                 if (t.code() == 401) { connectionDialog.showDialog(refreshType, Constants.IS_NOT_CHECKED,"Login yoki parol noto'g'ri !!") }
                 else if (t.code() == 500) { connectionDialog.showDialog(refreshType, Constants.IS_NOT_CHECKED, "Malumotlarar mavjuda emas !!") }
                 else if (t.code() == 404) { connectionDialog.showDialog(refreshType, Constants.IS_NOT_CHECKED, "Malumotlar manzili topilmadi !!") }
-                else connectionDialog.showDialog(refreshType, Constants.IS_NOT_CHECKED, errorMassage)
+                else { connectionDialog.showDialog(refreshType, Constants.IS_NOT_CHECKED, myErrorMessage?: "So'rov bilan xatolik mavjud-2 !!") }
 
             }
             is SocketTimeoutException, is InterruptedIOException, is TimeoutException ->{
@@ -47,7 +47,7 @@ class ConnectionError(val context: Context) {
 
             else -> {
                 Log.e("$tag connection error: ", t?.localizedMessage.toString())
-                connectionDialog.showDialog(refreshType, Constants.IS_NOT_CHECKED, "So'rov bilan xatolik mavjud !!")
+                connectionDialog.showDialog(refreshType, Constants.IS_NOT_CHECKED, "So'rov bilan xatolik mavjud-3 !!")
             }
         }
     }

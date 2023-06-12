@@ -1,5 +1,6 @@
-package com.med.medland.data.api.retrofit
+package com.med.medland.data.api.retrofitCreate
 
+import com.med.medland.data.api.apiRequest.SignInAndSignUpApi
 import com.med.medland.data.locale.Constants
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -9,7 +10,7 @@ object RetrofitInstance {
 
     private val client = OkHttpClient.Builder().apply { addInterceptor(ApiInterceptor()) }.build()
 
-    val api: MedlandApi by lazy { retrofit.create(MedlandApi::class.java) }
+    val api: SignInAndSignUpApi by lazy { retrofit.create(SignInAndSignUpApi :: class.java) }
 
     val retrofit: Retrofit by lazy {
          Retrofit.Builder()

@@ -7,34 +7,37 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.coroutineScope
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.med.medland.R
-import com.med.medland.data.api.retrofit.ApiResult.Companion.error
-import com.med.medland.data.api.retrofit.ApiResult.Companion.success
+import com.med.medland.data.api.retrofitCreate.ApiResult.Companion.error
+import com.med.medland.data.api.retrofitCreate.ApiResult.Companion.success
 import com.med.medland.data.locale.Constants
 import com.med.medland.data.room.database.UserDataBase
 import com.med.medland.data.room.table.MyInfoTable
 import com.med.medland.databinding.FragmentLoginBinding
 import com.med.medland.presentation.fragment.loginFragment.model.LoginViewModel
+import com.med.medland.presentation.fragment.otherComponents.MyCustomSnackBar
+import com.med.medland.presentation.fragment.otherComponents.PhoneMaskManager
+import com.med.medland.presentation.fragment.otherComponents.adapter.SelectCountryCodeAdapter
 import com.med.medland.presentation.fragment.otherComponents.connection.ConnectionError
 import com.med.medland.presentation.fragment.otherComponents.connection.ConnectivityManager
 import com.med.medland.presentation.fragment.otherComponents.dialog.ConnectionDialog
+import com.med.medland.presentation.fragment.otherComponents.dialog.SelectCountryCodeDialog
+import com.med.medland.presentation.fragment.otherComponents.model.PhoneMaskModel
 import com.med.medland.presentation.fragment.profileFragment.model.MyInfoModel
 import com.orhanobut.hawk.Hawk
+import com.santalu.maskara.Mask
+import com.santalu.maskara.MaskChangedListener
+import com.santalu.maskara.MaskStyle
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
-import kotlin.coroutines.coroutineContext
 
 
-class LoginFragment : Fragment(), ConnectionDialog.RefreshClicked {
+class LoginFragment : Fragment(), ConnectionDialog.RefreshClicked, SelectCountryCodeAdapter.SelectedCountryListener {
 
     private lateinit var binding : FragmentLoginBinding
     private lateinit var viewModel : LoginViewModel
@@ -42,6 +45,11 @@ class LoginFragment : Fragment(), ConnectionDialog.RefreshClicked {
     private lateinit var connectivityManager: ConnectivityManager
     private lateinit var connectionError: ConnectionError
     private lateinit var userDataBase: UserDataBase
+    private lateinit var selectCountryCodeAdapter: SelectCountryCodeAdapter
+    private lateinit var countryCodeDialog: SelectCountryCodeDialog
+    private lateinit var myCustomSnackBar: MyCustomSnackBar
+    private var phoneMaskManager = PhoneMaskManager()
+    private var phoneNumberLength = 12
     private var isConnected = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,7 +59,8 @@ class LoginFragment : Fragment(), ConnectionDialog.RefreshClicked {
         connectivityManager = ConnectivityManager(requireContext())
         connectionError = ConnectionError(requireContext())
         userDataBase = UserDataBase.getDataBase(requireContext())
-
+        selectCountryCodeAdapter = SelectCountryCodeAdapter(phoneMaskManager.loadPhoneMusk(), this, true)
+        countryCodeDialog = SelectCountryCodeDialog(requireContext(), selectCountryCodeAdapter, phoneMaskManager, true)
         initObservers()
     }
 
@@ -66,6 +75,11 @@ class LoginFragment : Fragment(), ConnectionDialog.RefreshClicked {
 
         connectivityManager.observe(viewLifecycleOwner) { isConnected = it }
 
+
+        binding.loginCountryNumTv.setOnClickListener {
+            countryCodeDialog.showDialog()
+        }
+
         binding.loginSignUpBtn.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_signUpOneFragment)
         }
@@ -75,6 +89,7 @@ class LoginFragment : Fragment(), ConnectionDialog.RefreshClicked {
         }
 
         binding.loginSignInBtn.setOnClickListener {
+            myCustomSnackBar = MyCustomSnackBar(it, layoutInflater)
             getToken()
         }
     }
@@ -82,15 +97,17 @@ class LoginFragment : Fragment(), ConnectionDialog.RefreshClicked {
     private fun getToken() {
 
         if (isConnected) {
-            val username = binding.phoneNumberEt.text.toString()
+            val username = binding.loginCountryNumTv.text.toString().replace("+","") +binding.phoneNumberEt.text.toString().replace(" ","")
             val password = binding.passwordEt.text.toString()
 
             when {
-                username.isEmpty() -> {
-                    binding.phoneNumberEt.error = "Loginni kiriting"
+                binding.phoneNumberEt.text.toString().isEmpty() -> {
+                    myCustomSnackBar.showErrorSnack("Raqamingizni kiriting !")
+                    binding.phoneNumberEt.requestFocus()
                 }
                 password.isEmpty() -> {
-                    binding.passwordEt.error = "parolni kiriting"
+                    myCustomSnackBar.showErrorSnack("Parolingizni kiriting !")
+                    binding.passwordEt.requestFocus()
                 }
                 else -> {
                     connectionDialog.showDialog("getToken",Constants.IS_LOADING,"Iltimos kuting malumotlaringiz tekshirilmoqda...")
@@ -129,12 +146,12 @@ class LoginFragment : Fragment(), ConnectionDialog.RefreshClicked {
                     findNavController().navigate(R.id.action_loginFragment_to_patientFragment)
                 }
                 else {
-                    connectionError.checkConnectionError(apiResult.error,connectionDialog,"getToken", Constants.LOGIN_FRAGMENT)
+                    connectionError.checkConnectionError(apiResult.error,connectionDialog,"getToken", Constants.LOGIN_FRAGMENT,null)
                 }
             }
 
             apiResult.error {
-                connectionError.checkConnectionError(apiResult.error,connectionDialog,"getToken", Constants.LOGIN_FRAGMENT)
+                connectionError.checkConnectionError(apiResult.error,connectionDialog,"getToken", Constants.LOGIN_FRAGMENT, null)
             }
         }
 
@@ -177,5 +194,16 @@ class LoginFragment : Fragment(), ConnectionDialog.RefreshClicked {
                 )
             )
         }
+    }
+
+    override fun selectedCountry(selected: PhoneMaskModel) {
+        binding.loginCountryNumTv.text = selected.countryCode
+        binding.phoneNumberEt.hint = selected.mask
+        phoneNumberLength = selected.mask.trim().length
+        val value = selected.mask.replace("0", "-")
+        val mask = Mask(value, '-', MaskStyle.COMPLETABLE)
+        val listener = MaskChangedListener(mask)
+        binding.phoneNumberEt.addTextChangedListener(listener)
+        countryCodeDialog.dismissDialog()
     }
 }

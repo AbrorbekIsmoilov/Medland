@@ -1,4 +1,4 @@
-package com.med.medland.data.api.retrofit
+package com.med.medland.data.api.retrofitCreate
 
 import com.med.medland.presentation.fragment.loginFragment.model.LoginResponseModel
 import retrofit2.Response

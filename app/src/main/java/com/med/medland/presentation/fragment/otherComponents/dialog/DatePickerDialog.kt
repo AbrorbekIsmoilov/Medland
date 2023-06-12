@@ -47,11 +47,9 @@ class DatePickerDialog(val context : Context) {
             dismissDialog()
         }
 
-        binding.datePicker.setDataSelectListener( object : DatePicker.DataSelectListener{
-            override fun onDateSelected(date: Long, day: Int, month: Int, year: Int) {
-                selectedDate = "$day / $month / $year"
-            }
-        })
+        binding.datePicker.setDataSelectListener { date, day, month, year ->
+            selectedDate = "$day / ${month.inc()} / $year"
+        }
 
         binding.setDateBtn.setOnClickListener {
             tv_date.text = selectedDate

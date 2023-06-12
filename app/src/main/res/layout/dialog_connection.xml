@@ -56,14 +56,14 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="40dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:visibility="gone">
+            android:layout_marginBottom="20dp">
 
             <TextView
                 android:id="@+id/dg_conection_dismiss_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:background="@drawable/backgound_116_50"
+                android:backgroundTint="@color/white"
                 android:fontFamily="@font/gilroy_regular"
                 android:gravity="center"
                 android:text="Bekor qilish"

@@ -131,5 +131,15 @@
             app:destination="@id/congratulationsFragment"
             app:popUpTo="@id/splashFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_pinCodeFragment_to_passwordRecoveryFragment"
+            app:destination="@id/passwordRecoveryFragment"
+            app:popUpTo="@id/passwordRecoveryFragment"
+            app:popUpToInclusive="true" />
     </fragment>
+    <fragment
+        android:id="@+id/passwordRecoveryFragment"
+        android:name="com.med.medland.presentation.fragment.passwordRecoveryFragment.PasswordRecoveryFragment"
+        android:label="fragment_password_recovery"
+        tools:layout="@layout/fragment_password_recovery" />
 </navigation>
