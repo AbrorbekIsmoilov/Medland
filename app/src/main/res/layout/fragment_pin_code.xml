@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tov"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_background"
@@ -16,7 +17,7 @@
         android:layout_gravity="center|top"
         android:layout_marginTop="200dp"
         android:fontFamily="@font/gilroy_medium"
-        android:text="Enter security code"
+        android:text="Pin kod yarating"
         android:textColor="#090809" />
 
     <LinearLayout
@@ -28,16 +29,16 @@
 
         <ImageView
             android:id="@+id/pin_one"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_marginEnd="5dp"
             android:layout_weight="1"
             android:src="@drawable/ic_circle" />
 
         <ImageView
             android:id="@+id/pin_two"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             android:layout_weight="1"
@@ -45,8 +46,8 @@
 
         <ImageView
             android:id="@+id/pin_three"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             android:layout_weight="1"
@@ -54,8 +55,8 @@
 
         <ImageView
             android:id="@+id/pin_four"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_marginStart="5dp"
             android:layout_weight="1"
             android:src="@drawable/ic_circle" />
@@ -249,9 +250,10 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView15"
+            android:id="@+id/finger_print_btn"
             android:layout_width="100dp"
             android:layout_height="match_parent"
+            android:visibility="invisible"
             android:layout_marginEnd="15dp"
             android:background="@drawable/background_square"
             android:backgroundTint="@color/main_background"
@@ -286,7 +288,7 @@
             android:textSize="48sp" />
 
         <ImageView
-            android:id="@+id/textView19"
+            android:id="@+id/back_tage_btn"
             android:layout_width="100dp"
             android:layout_height="match_parent"
             android:layout_gravity="center|end"
@@ -303,7 +305,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/forgot_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"

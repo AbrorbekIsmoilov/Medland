@@ -2,63 +2,60 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sign_one"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_background"
     tools:context=".presentation.fragment.signUpFragment.SignUpOneFragment">
 
-    <ImageView
-        android:id="@+id/sign_up_image_title"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/background_square"
-        android:backgroundTint="@color/white"
-        android:paddingTop="5dp"
-        android:src="@drawable/heart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/sign_up_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:fontFamily="@font/gilroy_semibold"
         android:text="Registration"
         android:textColor="@color/black"
-        android:layout_marginTop="80dp"
         android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="@+id/sign_up_image_title"
-        app:layout_constraintStart_toStartOf="@+id/sign_up_image_title"
-        app:layout_constraintTop_toBottomOf="@+id/sign_up_image_title" />
+        app:layout_constraintBottom_toTopOf="@+id/sign_up_change_image_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/sign_up_change_image_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/sign_up_firstname_et"
         app:layout_constraintEnd_toEndOf="@+id/sign_up_title"
         app:layout_constraintStart_toStartOf="@+id/sign_up_title"
-        app:layout_constraintTop_toBottomOf="@+id/sign_up_title"
         tools:ignore="SpeakableTextPresentCheck">
 
-        <ImageView
-            android:id="@+id/sign_up_selected_image"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sign_up_selected_image_card"
             android:layout_width="100dp"
             android:layout_height="100dp"
+
             android:layout_margin="20dp"
-            android:background="@drawable/background_square"
-            android:backgroundTint="@color/white"
-            android:padding="10dp"
-            android:scaleType="fitCenter"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/carton_man_image_one">
+            app:layout_constraintTop_toTopOf="parent">
 
-        </ImageView>
+            <ImageView
+                android:id="@+id/sign_up_selected_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_square"
+                android:backgroundTint="@color/white"
+                android:padding="10dp"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/carton_man_image_one">
+
+            </ImageView>
+        </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/sign_up_change_img_card"
@@ -66,8 +63,8 @@
             android:layout_height="40dp"
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
-            app:cardCornerRadius="50dp"
             android:elevation="0dp"
+            app:cardCornerRadius="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
 
@@ -82,22 +79,22 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <EditText
-        android:id="@+id/sign_up_phone_number_et"
+        android:id="@+id/sign_up_firstname_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
         android:layout_marginEnd="20dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/background_input_388_70"
         android:fontFamily="@font/gilroy_regular"
         android:hint="Full name"
         android:inputType="textPersonName"
+        android:paddingStart="60dp"
         android:textColorHint="@color/gray_text_color"
         android:textSize="18sp"
-        android:paddingStart="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_brith_date"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_up_change_image_btn"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/sign_up_ic_person"
@@ -105,26 +102,26 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:src="@drawable/ic_person"
-        app:layout_constraintBottom_toBottomOf="@+id/sign_up_phone_number_et"
-        app:layout_constraintStart_toStartOf="@+id/sign_up_phone_number_et"
-        app:layout_constraintTop_toTopOf="@+id/sign_up_phone_number_et" />
+        app:layout_constraintBottom_toBottomOf="@+id/sign_up_firstname_et"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_firstname_et"
+        app:layout_constraintTop_toTopOf="@+id/sign_up_firstname_et" />
 
     <TextView
         android:id="@+id/et_brith_date"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/background_input_388_70"
         android:clickable="false"
         android:fontFamily="@font/gilroy_regular"
+        android:gravity="center|start"
         android:hint="Brith date"
+        android:paddingStart="60dp"
         android:textColorHint="@color/gray_text_color"
         android:textSize="18sp"
-        android:gravity="center|start"
-        android:paddingStart="60dp"
-        app:layout_constraintEnd_toEndOf="@+id/sign_up_phone_number_et"
-        app:layout_constraintStart_toStartOf="@+id/sign_up_phone_number_et"
-        app:layout_constraintTop_toBottomOf="@+id/sign_up_phone_number_et"
+        app:layout_constraintBottom_toTopOf="@+id/selected_country_tv"
+        app:layout_constraintEnd_toEndOf="@+id/sign_up_firstname_et"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_firstname_et"
         app:textInputLayoutFocusedRectEnabled="true" />
 
 
@@ -139,10 +136,69 @@
         app:layout_constraintTop_toTopOf="@+id/et_brith_date" />
 
     <TextView
+        android:id="@+id/selected_country_tv"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="15dp"
+        android:paddingStart="60dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/gilroy_medium"
+        android:textColor="@color/black_text_color2"
+        android:gravity="start|center"
+        android:text="Uzbekistan"
+        android:background="@drawable/background_input_388_70"
+        app:layout_constraintBottom_toTopOf="@+id/selected_region_tv"
+        app:layout_constraintEnd_toEndOf="@+id/sign_up_firstname_et"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_firstname_et"
+        app:textInputLayoutFocusedRectEnabled="true" />
+
+    <ImageView
+        android:id="@+id/selected_country_flag_img"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_online"
+        app:layout_constraintBottom_toBottomOf="@+id/selected_country_tv"
+        app:layout_constraintStart_toStartOf="@+id/selected_country_tv"
+        app:layout_constraintTop_toTopOf="@+id/selected_country_tv" />
+
+    <TextView
+        android:id="@+id/selected_region_tv"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="40dp"
+        android:paddingStart="60dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/gilroy_medium"
+        android:textColor="@color/black_text_color2"
+        android:gravity="start|center"
+        android:paddingEnd="20dp"
+        android:drawableTint="@color/gray_text_color2"
+        android:drawableEnd="@drawable/ic_right_arrow"
+        android:textColorHint="@color/gray_text_color"
+        android:hint="Viloyat va tumaningiz"
+        android:background="@drawable/background_btn_390_50"
+        app:layout_constraintBottom_toTopOf="@+id/sign_up_gen_man_btn"
+        app:layout_constraintEnd_toEndOf="@+id/sign_up_firstname_et"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_firstname_et"
+        app:textInputLayoutFocusedRectEnabled="true" />
+
+    <ImageView
+        android:id="@+id/selected_region_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_city"
+        app:layout_constraintBottom_toBottomOf="@+id/selected_region_tv"
+        app:layout_constraintStart_toStartOf="@+id/selected_region_tv"
+        app:layout_constraintTop_toTopOf="@+id/selected_region_tv"
+        app:tint="@color/gray_text_color2" />
+
+    <TextView
         android:id="@+id/sign_up_gen_man_btn"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
         android:background="@drawable/gender_blue_background"
         android:clickable="true"
         android:focusable="true"
@@ -154,8 +210,8 @@
         android:paddingBottom="10dp"
         android:text="Erkak"
         android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="@+id/et_brith_date"
-        app:layout_constraintTop_toBottomOf="@+id/et_brith_date" />
+        app:layout_constraintBottom_toTopOf="@+id/sign_up_one_next_btn"
+        app:layout_constraintStart_toStartOf="@+id/et_brith_date" />
 
     <ImageView
         android:id="@+id/gender_man_image"

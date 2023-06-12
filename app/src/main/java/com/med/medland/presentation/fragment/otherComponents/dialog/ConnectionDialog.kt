@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import com.med.medland.data.locale.Constants
 import com.med.medland.databinding.DialogConnectionBinding
+import okhttp3.ResponseBody
 
 class ConnectionDialog(val context: Context, private val refreshClicked : RefreshClicked) {
 
@@ -28,7 +29,7 @@ class ConnectionDialog(val context: Context, private val refreshClicked : Refres
         connectionDialog?.show()
     }
     
-    fun showDialog(refreshType: String, animationType : String, message : String) {
+    fun showDialog(refreshType: String, animationType: String, message: String) {
         dismissDialog()
         if (connectionDialog == null) {
             createDialog()
@@ -51,11 +52,12 @@ class ConnectionDialog(val context: Context, private val refreshClicked : Refres
         when(key) {
             Constants.NO_INTERNET -> {
                 connectionBinding.dgConnectionLottie.setAnimation("no_internet.json")
-                connectionBinding.dgConnectionText.text = "Tarmoq bilan  aloqa mavjud emas!  "
+                connectionBinding.dgConnectionText.text = "Tarmoq bilan  aloqa mavjud emas!"
                 connectionBinding.dgConnectionBtnLayout.visibility = View.VISIBLE
             }
             Constants.IS_LOADING -> {
                 connectionBinding.dgConnectionLottie.setAnimation("heart_beat_loading2.json")
+                connectionBinding.dgConnectionLottie.playAnimation()
                 connectionBinding.dgConnectionText.text = message
             }
             Constants.IS_CHECK_API -> {

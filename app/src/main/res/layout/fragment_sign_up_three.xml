@@ -149,6 +149,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
+            android:foreground="?attr/selectableItemBackground"
             android:background="@drawable/text_lines_bottom"
             android:fontFamily="@font/gilroy_medium"
             android:text="Qaytadan yuborish"
@@ -199,6 +200,7 @@
             android:layout_marginStart="5dp"
             android:layout_weight="1"
             android:fontFamily="@font/gilroy_bold"
+            android:foreground="?attr/selectableItemBackground"
             android:text="Sign in"
             android:textColor="@color/blue_color"
             android:textSize="16sp" />

@@ -7,49 +7,68 @@
     android:background="@color/main_background"
     tools:context=".presentation.fragment.signUpFragment.SignUpTwoFragment">
 
-    <ImageView
-        android:id="@+id/sign_up_two_image_title"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/background_square"
-        android:backgroundTint="@color/white"
-        android:paddingTop="5dp"
-        android:src="@drawable/heart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/sign_up_two_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
         android:fontFamily="@font/gilroy_semibold"
         android:text="Registration"
-        android:layout_marginTop="100dp"
         android:textColor="@color/black"
         android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/sign_up_phone_number_et"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_up_two_image_title" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
+
+    <com.santalu.maskara.widget.MaskEditText
         android:id="@+id/sign_up_phone_number_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
         android:layout_marginEnd="20dp"
-        android:textColorHint="@color/gray_text_color"
-        android:fontFamily="@font/gilroy_regular"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/background_input_388_70"
+        android:fontFamily="@font/gilroy_regular"
         android:hint="Phone number"
         android:inputType="phone|numberSigned"
-        android:paddingStart="60dp"
+        android:paddingStart="120dp"
+        android:textColorHint="@color/gray_text_color"
+        app:layout_constraintBottom_toTopOf="@+id/sign_up_email_et"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_up_two_title"
-        tools:ignore="RtlSymmetry,TextFields" />
+        app:mask="-- --- -- --"
+        app:maskCharacter="-"
+        app:maskStyle="completable" />
+
+    <TextView
+        android:id="@+id/sign_up_country_num_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@null"
+        android:fontFamily="@font/gilroy_medium"
+        android:gravity="center|start"
+        android:paddingStart="50dp"
+        android:paddingEnd="15dp"
+        android:text="+998"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/sign_up_phone_number_et"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_phone_number_et"
+        app:layout_constraintTop_toTopOf="@+id/sign_up_phone_number_et" />
+
+
+    <View
+        android:id="@+id/country_code_line"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="@+id/sign_up_country_num_tv"
+        app:layout_constraintEnd_toEndOf="@+id/sign_up_country_num_tv"
+        app:layout_constraintStart_toEndOf="@+id/sign_up_country_num_tv"
+        app:layout_constraintTop_toTopOf="@+id/sign_up_country_num_tv" />
 
     <ImageView
         android:id="@+id/sign_up_phone_number"
@@ -61,23 +80,52 @@
         app:layout_constraintStart_toStartOf="@+id/sign_up_phone_number_et"
         app:layout_constraintTop_toTopOf="@+id/sign_up_phone_number_et" />
 
+    <EditText
+        android:id="@+id/sign_up_email_et"
+        android:layout_width="0dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:paddingStart="60dp"
+        android:textColorHint="@color/gray_text_color"
+        android:hint="E-mail pochtangizni kiriting"
+        android:textSize="18sp"
+        android:fontFamily="@font/gilroy_medium"
+        android:background="@drawable/background_input_388_70"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/sign_up_password_et"
+        app:layout_constraintEnd_toEndOf="@+id/sign_up_phone_number_et"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_phone_number_et" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_email"
+        app:layout_constraintBottom_toBottomOf="@+id/sign_up_email_et"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_email_et"
+        app:layout_constraintTop_toTopOf="@+id/sign_up_email_et"
+        app:tint="@color/gray_text_color" />
+
     <com.scottyab.showhidepasswordedittext.ShowHidePasswordEditText
         android:id="@+id/sign_up_password_et"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/background_input_388_70"
         android:fontFamily="@font/gilroy_regular"
         android:hint="Password"
         android:inputType="textPassword"
         android:paddingStart="60dp"
-        android:layout_marginTop="20dp"
         android:paddingEnd="20dp"
         android:textColorHint="@color/gray_text_color"
+        app:layout_constraintBottom_toTopOf="@+id/sign_up_confirm_password_et"
         app:layout_constraintEnd_toEndOf="@+id/sign_up_phone_number_et"
         app:layout_constraintStart_toStartOf="@+id/sign_up_phone_number_et"
-        app:layout_constraintTop_toBottomOf="@+id/sign_up_phone_number_et"
         app:passwordToggleEnabled="true"
-        app:tint_color="@color/gray_text_color"/>
+        app:tint_color="@color/gray_text_color" />
 
     <ImageView
         android:id="@+id/sign_up_password"
@@ -93,18 +141,18 @@
         android:id="@+id/sign_up_confirm_password_et"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="180dp"
         android:background="@drawable/background_input_388_70"
         android:fontFamily="@font/gilroy_regular"
         android:hint="Password"
         android:inputType="textPassword"
         android:paddingStart="60dp"
-        android:layout_marginTop="20dp"
         android:paddingEnd="20dp"
         android:textColorHint="@color/gray_text_color"
+        app:layout_constraintBottom_toTopOf="@+id/sign_up_two_next_btn"
         app:layout_constraintEnd_toEndOf="@+id/sign_up_password_et"
         app:layout_constraintStart_toStartOf="@+id/sign_up_password_et"
-        app:layout_constraintTop_toBottomOf="@+id/sign_up_password_et"
-        app:tint_color="@color/gray_text_color"/>
+        app:tint_color="@color/gray_text_color" />
 
     <ImageView
         android:id="@+id/sign_up_confirm_password"

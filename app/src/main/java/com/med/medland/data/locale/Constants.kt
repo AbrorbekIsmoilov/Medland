@@ -5,11 +5,13 @@ object Constants {
     //Medland Api Url
     const val BASE_URL = "https://projectmedland.uz/"
     const val BASE_URL_IMAGES = "${BASE_URL}images/"
+    const val BASE_URL_FOR_YOUTUBE = "https://www.youtube.com/watch?v="
 
     //Hawk keys
     const val TOKEN = "access_token"
     const val USERNAME = "my_username"
     const val PASSWORD = "my_password"
+    const val PIN_CODE = "my_pinCode"
     const val LOGIN = "app_login"
     const val LOGGED_IN = 1
     const val WATCH_INTERVIEW = "watch_interview"
@@ -32,5 +34,7 @@ object Constants {
     const val CONNECTIVITY_MANAGER = "TAG CONNECTIVITY MANAGER"
     const val SPLASH_FRAGMENT = "TAG SPLASH FRAGMENT"
     const val LOGIN_FRAGMENT = "TAG LOGIN FRAGMENT"
+    const val SIGNUP2_FRAGMENT = "TAG SIGN UP2 FRAGMENT"
+    const val SIGNUP3_FRAGMENT = "TAG SIGN UP3 FRAGMENT"
 
 }

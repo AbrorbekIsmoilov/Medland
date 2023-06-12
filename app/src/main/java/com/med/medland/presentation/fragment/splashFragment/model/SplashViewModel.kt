@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.med.medland.data.api.retrofit.ApiResult
 import com.med.medland.presentation.fragment.loginFragment.model.LoginResponseModel
-import com.med.medland.presentation.fragment.loginFragment.repository.LoginRepository
 import com.med.medland.presentation.fragment.splashFragment.repository.SplashRepository
 import kotlinx.coroutines.launch
 import retrofit2.HttpException
