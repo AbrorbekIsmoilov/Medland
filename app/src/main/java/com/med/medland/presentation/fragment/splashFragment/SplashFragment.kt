@@ -11,12 +11,11 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.med.medland.R
-import com.med.medland.data.api.retrofitCreate.ApiResult.Companion.error
-import com.med.medland.data.api.retrofitCreate.ApiResult.Companion.success
+import com.med.medland.data.api.retrofit.ApiResult.Companion.error
+import com.med.medland.data.api.retrofit.ApiResult.Companion.success
 import com.med.medland.data.locale.Constants
 import com.med.medland.databinding.FragmentSplashBinding
 import com.med.medland.presentation.fragment.loginFragment.model.LoginViewModel
-import com.med.medland.presentation.fragment.otherComponents.MyCustomSnackBar
 import com.med.medland.presentation.fragment.otherComponents.connection.ConnectionError
 import com.med.medland.presentation.fragment.otherComponents.connection.ConnectivityManager
 import com.med.medland.presentation.fragment.otherComponents.dialog.ConnectionDialog

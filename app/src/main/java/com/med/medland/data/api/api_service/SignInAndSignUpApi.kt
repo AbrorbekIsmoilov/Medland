@@ -1,4 +1,4 @@
-package com.med.medland.data.api.apiRequest
+package com.med.medland.data.api.api_service
 
 import com.med.medland.presentation.fragment.loginFragment.model.LoginResponseModel
 import com.med.medland.presentation.fragment.otherComponents.model.DetailResponseModel

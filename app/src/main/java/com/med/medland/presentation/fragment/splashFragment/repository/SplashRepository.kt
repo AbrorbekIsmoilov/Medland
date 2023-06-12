@@ -1,7 +1,7 @@
 package com.med.medland.presentation.fragment.splashFragment.repository
 
-import com.med.medland.data.api.apiRequest.SignInAndSignUpApi
-import com.med.medland.data.api.retrofitCreate.RetrofitInstance
+import com.med.medland.data.api.api_service.SignInAndSignUpApi
+import com.med.medland.data.api.retrofit.RetrofitInstance
 import com.med.medland.presentation.fragment.loginFragment.model.LoginResponseModel
 import retrofit2.Response
 

@@ -1,6 +1,6 @@
-package com.med.medland.data.api.retrofitCreate
+package com.med.medland.data.api.retrofit
 
-import com.med.medland.data.api.apiRequest.SignInAndSignUpApi
+import com.med.medland.data.api.api_service.SignInAndSignUpApi
 import com.med.medland.data.locale.Constants
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit

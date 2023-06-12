@@ -3,7 +3,7 @@ package com.med.medland.presentation.fragment.loginFragment.model
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.med.medland.data.api.retrofitCreate.ApiResult
+import com.med.medland.data.api.retrofit.ApiResult
 import com.med.medland.presentation.fragment.loginFragment.repository.LoginRepository
 import kotlinx.coroutines.launch
 import retrofit2.HttpException

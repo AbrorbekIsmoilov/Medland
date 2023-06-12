@@ -5,7 +5,7 @@ import android.widget.TextView
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.med.medland.data.api.retrofitCreate.ApiResult
+import com.med.medland.data.api.retrofit.ApiResult
 import com.med.medland.presentation.fragment.otherComponents.model.DetailResponseModel
 import com.med.medland.presentation.fragment.otherComponents.model.GetRegionModel
 import com.med.medland.presentation.fragment.signUpFragment.repository.SignUpRepository

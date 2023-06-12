@@ -12,8 +12,8 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.med.medland.R
-import com.med.medland.data.api.retrofitCreate.ApiResult.Companion.error
-import com.med.medland.data.api.retrofitCreate.ApiResult.Companion.success
+import com.med.medland.data.api.retrofit.ApiResult.Companion.error
+import com.med.medland.data.api.retrofit.ApiResult.Companion.success
 import com.med.medland.data.room.database.UserDataBase
 import com.med.medland.data.room.table.MyInfoTable
 import com.med.medland.databinding.FragmentPinCodeBinding

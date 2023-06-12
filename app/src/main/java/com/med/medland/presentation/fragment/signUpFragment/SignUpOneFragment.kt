@@ -2,26 +2,20 @@ package com.med.medland.presentation.fragment.signUpFragment
 
 import android.annotation.SuppressLint
 import android.graphics.Color
-import android.graphics.drawable.Drawable
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.Toast
 import androidx.annotation.RequiresApi
-import androidx.core.view.marginBottom
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
-import com.google.android.material.snackbar.Snackbar
 import com.med.medland.R
-import com.med.medland.data.api.retrofitCreate.ApiResult
-import com.med.medland.data.api.retrofitCreate.ApiResult.Companion.error
-import com.med.medland.data.api.retrofitCreate.ApiResult.Companion.success
+import com.med.medland.data.api.retrofit.ApiResult.Companion.error
+import com.med.medland.data.api.retrofit.ApiResult.Companion.success
 import com.med.medland.data.locale.Constants
 import com.med.medland.databinding.FragmentSignUpOneBinding
 import com.med.medland.presentation.fragment.otherComponents.GetImageBottomSheet
@@ -32,7 +26,6 @@ import com.med.medland.presentation.fragment.otherComponents.adapter.SelectCount
 import com.med.medland.presentation.fragment.otherComponents.dialog.DatePickerDialog
 import com.med.medland.presentation.fragment.otherComponents.dialog.SelectCountryCodeDialog
 import com.med.medland.presentation.fragment.otherComponents.dialog.SelectRegionDialog
-import com.med.medland.presentation.fragment.otherComponents.model.GetDistrictModel
 import com.med.medland.presentation.fragment.otherComponents.model.GetRegionModel
 import com.med.medland.presentation.fragment.otherComponents.model.PhoneMaskModel
 import com.med.medland.presentation.fragment.signUpFragment.model.SignUpViewModel

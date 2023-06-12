@@ -3,7 +3,7 @@ package com.med.medland.presentation.fragment.otherComponents.connection
 import android.annotation.SuppressLint
 import android.content.Context
 import android.util.Log
-import com.med.medland.data.api.retrofitCreate.RetrofitInstance
+import com.med.medland.data.api.retrofit.RetrofitInstance
 import com.med.medland.data.locale.Constants
 import com.med.medland.presentation.fragment.otherComponents.dialog.ConnectionDialog
 import okhttp3.ResponseBody

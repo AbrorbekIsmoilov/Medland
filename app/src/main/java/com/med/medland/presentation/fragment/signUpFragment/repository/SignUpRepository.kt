@@ -1,7 +1,7 @@
 package com.med.medland.presentation.fragment.signUpFragment.repository
 
-import com.med.medland.data.api.apiRequest.SignInAndSignUpApi
-import com.med.medland.data.api.retrofitCreate.RetrofitInstance
+import com.med.medland.data.api.api_service.SignInAndSignUpApi
+import com.med.medland.data.api.retrofit.RetrofitInstance
 import com.med.medland.presentation.fragment.otherComponents.model.DetailResponseModel
 import com.med.medland.presentation.fragment.otherComponents.model.GetRegionModel
 import com.med.medland.presentation.fragment.signUpFragment.model.PatientCreateModel
