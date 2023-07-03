@@ -7,7 +7,6 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import android.widget.TextView
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import com.med.medland.databinding.DatePickerDialogBinding
 import com.ozcanalasalvar.library.utils.DateUtils
@@ -30,7 +29,7 @@ class DatePickerDialog(val context : Context) {
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
-    fun showCalendarDialog(tv_date : TextView) {
+    fun showCalendarDialog(tv_date: TextView) {
         if (dialog == null) {
             createDialog()
         }
@@ -49,6 +48,32 @@ class DatePickerDialog(val context : Context) {
 
         binding.datePicker.setDataSelectListener { date, day, month, year ->
             selectedDate = "$day / ${month.inc()} / $year"
+        }
+
+        binding.setDateBtn.setOnClickListener {
+            tv_date.text = selectedDate
+            dismissDialog()
+        }
+    }
+    fun showCalendarDialogs(tv_date: TextView) {
+        if (dialog == null) {
+            createDialog()
+        }
+
+        binding.datePicker.offset = 3
+        binding.datePicker.setTextSize(19)
+        binding.datePicker.setPickerMode(DatePicker.DAY_ON_FIRST)
+        binding.datePicker.minDate = DateUtils.getTimeMiles(1950, 1, 1)
+        binding.datePicker.maxDate = DateUtils.getTimeMiles(2018, 12, 31)
+        binding.datePicker.date = DateUtils.getTimeMiles(2000, 8, 8)
+
+
+        binding.cancelBtn.setOnClickListener {
+            dismissDialog()
+        }
+
+        binding.datePicker.setDataSelectListener { date, day, month, year ->
+            selectedDate = "$day.${month.inc()}.$year"
         }
 
         binding.setDateBtn.setOnClickListener {

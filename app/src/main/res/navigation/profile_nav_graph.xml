@@ -9,5 +9,46 @@
         android:id="@+id/myProfileFragment"
         android:name="com.med.medland.presentation.fragment.profileFragment.MyProfileFragment"
         android:label="fragment_my_profile"
-        tools:layout="@layout/fragment_my_profile" />
+        tools:layout="@layout/fragment_my_profile" >
+        <action
+            android:id="@+id/action_myProfileFragment_to_loginFragment2"
+            app:destination="@id/loginFragment2" />
+        <action
+            android:id="@+id/action_myProfileFragment_to_signUpThreeFragment2"
+            app:destination="@id/signUpThreeFragment2" />
+        <action
+            android:id="@+id/action_myProfileFragment_to_appSettingsFragment"
+            app:destination="@id/appSettingsFragment" />
+        <action
+            android:id="@+id/action_myProfileFragment_to_medicalHistoryFragment"
+            app:destination="@id/medicalHistoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment2"
+        android:name="com.med.medland.presentation.fragment.loginFragment.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/signUpThreeFragment2"
+        android:name="com.med.medland.presentation.fragment.signUpFragment.SignUpThreeFragment"
+        android:label="fragment_sign_up_three"
+        tools:layout="@layout/fragment_sign_up_three" />
+    <fragment
+        android:id="@+id/appSettingsFragment"
+        android:name="com.med.medland.presentation.fragment.appSettings.AppSettingsFragment"
+        android:label="fragment_app_settings"
+        tools:layout="@layout/fragment_app_settings" >
+        <action
+            android:id="@+id/action_appSettingsFragment_to_myProfileFragment"
+            app:destination="@id/myProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicalHistoryFragment"
+        android:name="com.med.medland.presentation.fragment.medicalHistory.MedicalHistoryFragment"
+        android:label="fragment_medical_history"
+        tools:layout="@layout/fragment_medical_history" >
+        <action
+            android:id="@+id/action_medicalHistoryFragment_to_myProfileFragment"
+            app:destination="@id/myProfileFragment" />
+    </fragment>
 </navigation>

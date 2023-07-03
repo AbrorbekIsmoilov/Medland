@@ -1,6 +1,6 @@
 package com.med.medland.presentation.fragment.profileFragment.model
 
-data class MyInfoModel(
+ class MyInfoModel(
     val tugilgan_sana : String,
     val manzil : String,
     val viloyat_id : Int,
@@ -17,4 +17,7 @@ data class MyInfoModel(
     val balance : Double,
     val username : String,
     val online : String
+
+
 )
+

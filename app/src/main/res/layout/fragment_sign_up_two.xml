@@ -42,6 +42,7 @@
         app:maskCharacter="-"
         app:maskStyle="completable" />
 
+
     <TextView
         android:id="@+id/sign_up_country_num_tv"
         android:layout_width="wrap_content"
@@ -55,8 +56,8 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/sign_up_phone_number_et"
         app:layout_constraintStart_toStartOf="@+id/sign_up_phone_number_et"
-        app:layout_constraintTop_toTopOf="@+id/sign_up_phone_number_et" />
-
+        app:layout_constraintTop_toTopOf="@+id/sign_up_phone_number_et"
+        app:layout_constraintVertical_bias="0.0" />
 
     <View
         android:id="@+id/country_code_line"

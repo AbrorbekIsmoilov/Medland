@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="10dp">
+
+    <com.santalu.maskara.widget.MaskEditText
+        android:id="@+id/phone_number_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/background_input_388_70"
+        android:fontFamily="@font/gilroy_regular"
+        android:hint="Phone number"
+        android:inputType="phone|numberSigned"
+        android:paddingStart="120dp"
+        android:textColorHint="@color/gray_text_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:mask="-- --- -- --"
+        app:maskCharacter="-"
+        app:maskStyle="completable" />
+
+
+    <TextView
+        android:id="@+id/login_country_num_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@null"
+        android:fontFamily="@font/gilroy_medium"
+        android:gravity="center|start"
+        android:paddingStart="50dp"
+        android:paddingEnd="15dp"
+        android:text="+998"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/phone_number_et"
+        app:layout_constraintStart_toStartOf="@+id/phone_number_et"
+        app:layout_constraintTop_toTopOf="@+id/phone_number_et" />
+
+
+    <View
+        android:id="@+id/country_code_line"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="@+id/login_country_num_tv"
+        app:layout_constraintEnd_toEndOf="@+id/login_country_num_tv"
+        app:layout_constraintStart_toEndOf="@+id/login_country_num_tv"
+        app:layout_constraintTop_toTopOf="@+id/login_country_num_tv" />
+
+    <ImageView
+        android:id="@+id/login_call_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_call"
+        app:layout_constraintBottom_toBottomOf="@+id/phone_number_et"
+        app:layout_constraintStart_toStartOf="@+id/phone_number_et"
+        app:layout_constraintTop_toTopOf="@+id/phone_number_et" />
+
+
+    <ImageView
+        android:id="@+id/login_ic_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:src="@drawable/ic_call"
+        app:layout_constraintBottom_toBottomOf="@+id/phone_number_et"
+        app:layout_constraintStart_toStartOf="@+id/phone_number_et"
+        app:layout_constraintTop_toTopOf="@+id/phone_number_et" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/my_profile_number_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/blue"
+        android:text="Kodni yuborish"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/phone_number_et"
+        app:layout_constraintStart_toStartOf="@+id/phone_number_et"
+        app:layout_constraintTop_toBottomOf="@+id/phone_number_et" />
+</androidx.constraintlayout.widget.ConstraintLayout>

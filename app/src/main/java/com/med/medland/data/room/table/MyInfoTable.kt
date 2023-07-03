@@ -24,4 +24,5 @@ data class MyInfoTable(
     val balance : Double,
     val username : String,
     val online : String
+
 )

@@ -1,4 +1,4 @@
-package com.med.medland.presentation.fragment.otherComponents.dialog
+package com.med.medland.presentation.fragment.profileFragment.dialog
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
@@ -8,14 +8,14 @@ import android.graphics.drawable.ColorDrawable
 import androidx.core.widget.addTextChangedListener
 import com.med.medland.databinding.DialogCountryPhonePostalCodeBinding
 import com.med.medland.presentation.fragment.otherComponents.PhoneMaskManager
-import com.med.medland.presentation.fragment.otherComponents.adapter.SelectCountryCodeAdapter
+import com.med.medland.presentation.fragment.otherComponents.adapter.ProfileCountrySelectAdapter
 import com.med.medland.presentation.fragment.otherComponents.model.PhoneMaskModel
 
-class SelectCountryCodeDialog(
-    private val context: Context,
-    private val countryCodeAdapter: SelectCountryCodeAdapter,
-    private val phoneMaskManager: PhoneMaskManager,
-    private val codeShow: Boolean){
+class ProfilSelectCountryCodeDialog(
+    private val context : Context,
+    private val countryCodeAdapter : ProfileCountrySelectAdapter,
+    private val phoneMaskManager : PhoneMaskManager,
+    private val codeShow : Boolean){
 
     private var dialog : AlertDialog? = null
 

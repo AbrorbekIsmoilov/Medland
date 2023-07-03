@@ -35,7 +35,6 @@
             android:id="@+id/sign_up_selected_image_card"
             android:layout_width="100dp"
             android:layout_height="100dp"
-
             android:layout_margin="20dp"
             app:cardCornerRadius="15dp"
             app:cardElevation="0dp"

@@ -10,43 +10,46 @@ import com.med.medland.R
 import com.med.medland.databinding.ItemCountryFlagAndCodeBinding
 import com.med.medland.presentation.fragment.otherComponents.model.PhoneMaskModel
 
-class SelectCountryCodeAdapter(private var countryList : ArrayList<PhoneMaskModel>,
-                               val selectListener : SelectedCountryListener, val codeShow : Boolean)
-    : RecyclerView.Adapter<SelectCountryCodeAdapter.ViewHolder>() {
+class ProfileCountrySelectAdapter(private var countryList : ArrayList<PhoneMaskModel>,val selectListener : ProfileSelectList, val codeShow : Boolean)
+    : RecyclerView.Adapter<ProfileCountrySelectAdapter.ViewHolder>() {
 
-    interface SelectedCountryListener {
-        fun selectedCountry(selected : PhoneMaskModel)
-    }
 
-    class ViewHolder(val binding : ItemCountryFlagAndCodeBinding) : RecyclerView.ViewHolder(binding.root)
+
+     inner class ViewHolder(val binding : ItemCountryFlagAndCodeBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(ItemCountryFlagAndCodeBinding.inflate(LayoutInflater.from(parent.context),parent,false))
     }
 
-    override fun getItemCount() = countryList.size
-
-    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = countryList[position]
         holder.binding.apply {
             countryName.text = item.name
-            Glide.with(root.context).load(item.imageUrl).error(R.drawable.ic_online).into(coountryFlag)
+            Glide.with(root.context).load(item.imageUrl).error(R.drawable.ic_online)
+                .into(coountryFlag)
             if (codeShow) countryPhoneCode.text = item.countryCode
             root.setOnClickListener {
                 selectListener.selectedCountry(item)
 
-
             }
         }
 
-
     }
+    override fun getItemCount() = countryList.size
 
-    @SuppressLint("NotifyDataSetChanged")
-    fun filteredList(searchedList : ArrayList<PhoneMaskModel>) {
-        countryList = searchedList
-        notifyDataSetChanged()
-    }
+
+
+
+
+fun filteredList(searchedList : ArrayList<PhoneMaskModel>) {
+     countryList= searchedList
+    notifyDataSetChanged()
+}
+
+interface ProfileSelectList {
+    fun selectedCountry(selected : PhoneMaskModel)
 
 }
+
+}
+

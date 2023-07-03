@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/main_background"
-    tools:context=".presentation.fragment.profileFragment.MyProfileFragment">
+    tools:context=".presentation.fragment.appSettings.AppSettingsFragment">
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/profile_tool_bar_layout"
         android:layout_width="match_parent"
-        android:layout_height="290dp"
+        android:layout_height="270dp"
         android:background="@drawable/tool_bar_background"
         android:paddingTop="40dp"
         android:paddingBottom="40dp"
@@ -20,55 +21,90 @@
 
 
         <TextView
-            android:id="@+id/profile_tool_bar_title"
+            android:id="@+id/exit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:drawableStart="@drawable/ic_arrow_left"
+            android:drawableTint="@color/blue_color"
             android:fontFamily="@font/gilroy_medium"
-            android:text="Profile"
-            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="  Ilova sozlamalari"
             android:textColor="@color/black_text_color1"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/profile_image_card"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:cardCornerRadius="50dp"
-            app:cardElevation="0dp"
-            app:cardMaxElevation="0dp"
-            app:layout_constraintEnd_toEndOf="@+id/profile_tool_bar_title"
-            app:layout_constraintStart_toStartOf="@+id/profile_tool_bar_title"
-            app:layout_constraintTop_toBottomOf="@+id/profile_tool_bar_title">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/imageView"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:background="@drawable/background_sent_message_btn"
-                android:backgroundTint="#E6E2FF"
-                app:civ_border_width="0.5dp"
-                app:civ_border_color="@color/blue_color"
-                android:src="@drawable/man" />
-        </androidx.cardview.widget.CardView>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/cardView"
+    android:layout_width="120dp"
+    android:layout_height="120dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.1"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/exit">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/background_sent_message_btn"
+        android:backgroundTint="#E6E2FF"
+        android:src="@drawable/man"
+        app:civ_border_width="0.6dp"
+        app:civ_border_color="@color/blue_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="360dp"
+        android:elevation="100dp"
+        android:outlineSpotShadowColor="@color/blue_color"
+        app:cardBackgroundColor="@color/ic_launcher_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.94"
+        app:layout_constraintHorizontal_bias="0.94">
+        <ImageView
+            android:id="@+id/sign_up_change_image"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="7dp"
+            android:src="@drawable/ic_camera"
+            app:tint="@color/bottom_icon_gray" />
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
 
         <TextView
-            android:id="@+id/profile_my_name"
+            android:id="@+id/fullName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
             android:fontFamily="@font/gilroy_medium"
             android:text="Izzatillo Umarov"
-            android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textColor="@color/black_text_color1"
+            android:textSize="22sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/profile_image_card"
-            app:layout_constraintStart_toStartOf="@+id/profile_image_card"
-            app:layout_constraintTop_toBottomOf="@+id/profile_image_card" />
+            app:layout_constraintBottom_toBottomOf="@+id/cardView"
+            app:layout_constraintStart_toEndOf="@+id/cardView"
+            app:layout_constraintTop_toTopOf="@+id/cardView" />
 
         <TextView
             android:id="@+id/profile_my_id"
@@ -78,11 +114,9 @@
             android:fontFamily="@font/gilroy_regular"
             android:text="Profile ID: 12141214"
             android:textColor="@color/gray_text_color"
-            app:layout_constraintEnd_toEndOf="@+id/profile_my_name"
-            app:layout_constraintStart_toStartOf="@+id/profile_my_name"
-            app:layout_constraintTop_toBottomOf="@+id/profile_my_name" />
-
-
+            app:layout_constraintEnd_toEndOf="@+id/fullName"
+            app:layout_constraintStart_toStartOf="@+id/fullName"
+            app:layout_constraintTop_toBottomOf="@+id/fullName" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
@@ -97,133 +131,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile_tool_bar_layout">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginTop="15dp">
-
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_call"
-                android:layout_marginStart="15dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/blue_color" />
-
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="15dp"
-                android:src="@drawable/ic_right_arrow"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/gray_text_color" />
-
-            <LinearLayout
-                android:id="@+id/my_profile_raqam"
-                android:layout_width="0dp"
-                android:layout_height="44dp"
-                android:layout_marginStart="10dp"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-                app:layout_constraintEnd_toStartOf="@+id/imageView5"
-                app:layout_constraintStart_toEndOf="@+id/imageView4"
-                app:layout_constraintTop_toTopOf="@+id/imageView4">
-
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|start"
-                    android:fontFamily="@font/gilroy_medium"
-                    android:gravity="center"
-                    android:text="Telefon raqam"
-                    android:textColor="@color/black_text_color1"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/profile_call_number_tv"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="15dp"
-                    android:fontFamily="@font/gilroy_bold"
-                    android:gravity="center|start"
-                    android:text="+998 91 659 72 36  "
-                    android:textColor="@color/black_text_color1"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/textView5"
-                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
-            </LinearLayout>
-
-
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <View
-            android:id="@+id/divider2"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="15dp"
-            android:background="?android:attr/listDivider" />
-
         <FrameLayout
-            android:id="@+id/edt_brith"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginTop="10dp">
-
-            <TextView
-
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center|start"
-                android:layout_marginStart="15dp"
-                android:drawableStart="@drawable/ic_calendar"
-                android:drawableTint="@color/blue_color"
-                android:fontFamily="@font/gilroy_medium"
-                android:gravity="left|center"
-                android:text="Tug'ilgan sanasi"
-
-                android:textColor="@color/black_text_color1"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/profile_brith_date"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center|end"
-                android:layout_marginEnd="15dp"
-                android:drawableEnd="@drawable/ic_right_arrow"
-                android:drawableTint="#C5C5C5"
-                android:fontFamily="@font/gilroy_bold"
-                android:gravity="right|center"
-                android:text="03.03.1995  "
-                android:textColor="@color/black_text_color1"
-                android:textSize="16sp" />
-        </FrameLayout>
-
-        <View
-            android:id="@+id/divider3"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginEnd="15dp"
-            android:background="?android:attr/listDivider" />
-
-        <FrameLayout
-            android:id="@+id/gender_edit"
+            android:id="@+id/xavsizlik"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginTop="10dp">
@@ -233,96 +142,11 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|start"
                 android:layout_marginStart="15dp"
-                android:drawableStart="@drawable/ic_person"
+                android:drawableStart="@drawable/security"
                 android:drawableTint="@color/blue_color"
                 android:fontFamily="@font/gilroy_medium"
                 android:gravity="center"
-                android:text="  Jinsi"
-                android:textColor="@color/black_text_color1"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/profile_gender_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|end"
-                android:layout_marginEnd="15dp"
-                android:drawableEnd="@drawable/ic_right_arrow"
-                android:drawableTint="#C5C5C5"
-                android:fontFamily="@font/gilroy_bold"
-                android:gravity="center"
-                android:text="Erkak  "
-                android:textColor="@color/black_text_color1"
-                android:textSize="16sp" />
-        </FrameLayout>
-        <View
-            android:id="@+id/divider21"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="15dp"
-            android:background="?android:attr/listDivider" />
-
-        <FrameLayout
-            android:id="@+id/medical_history"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginTop="10dp">
-
-            <TextView
-                android:id="@+id/disease_btn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center|start"
-                android:layout_marginStart="15dp"
-                android:drawableStart="@drawable/medical_services"
-                android:drawableTint="@color/blue_color"
-                android:fontFamily="@font/gilroy_medium"
-                android:gravity="left|center"
-                android:text="  Kasallik tarixi"
-                android:textColor="@color/black_text_color1"
-                android:textSize="16sp" />
-
-            <TextView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|end"
-                android:layout_marginEnd="15dp"
-                android:drawableEnd="@drawable/ic_right_arrow"
-                android:drawableTint="#C5C5C5"
-                android:fontFamily="@font/gilroy_bold"
-                android:gravity="center"
-                android:text=""
-                android:textColor="@color/black_text_color1"
-                android:textSize="16sp" />
-        </FrameLayout>
-        <View
-            android:id="@+id/divider4"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginEnd="15dp"
-            android:background="?android:attr/listDivider" />
-
-        <FrameLayout
-            android:id="@+id/ilova_settingis"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginTop="10dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|start"
-                android:layout_marginStart="15dp"
-                android:drawableStart="@drawable/settings_profil"
-                android:drawableTint="@color/blue_color"
-                android:fontFamily="@font/gilroy_medium"
-                android:gravity="center"
-                android:text="  Ilova sozlamalari"
+                android:text="  Xavsizlk"
                 android:textColor="@color/black_text_color1"
                 android:textSize="16sp" />
 
@@ -340,26 +164,209 @@
                 android:textColor="@color/black_text_color1"
                 android:textSize="16sp" />
         </FrameLayout>
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:background="?android:attr/listDivider" />
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_marginStart="15dp"
+                android:drawableStart="@drawable/ic_notification"
+                android:drawableTint="@color/blue_color"
+                android:fontFamily="@font/gilroy_medium"
+                android:gravity="center"
+                android:text="  Xabarnomalar"
+                android:textColor="@color/black_text_color1"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/profile_brith_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_marginEnd="15dp"
+                android:drawableEnd="@drawable/ic_right_arrow"
+                android:drawableTint="#C5C5C5"
+                android:fontFamily="@font/gilroy_bold"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/black_text_color1"
+                android:textSize="16sp" />
+        </FrameLayout>
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="15dp"
+            android:background="?android:attr/listDivider" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_marginStart="15dp"
+                android:drawableStart="@drawable/ic_online"
+                android:drawableTint="@color/blue_color"
+                android:fontFamily="@font/gilroy_medium"
+                android:gravity="center"
+                android:text="  Tilni o'zgartirish"
+                android:textColor="@color/black_text_color1"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/profile_gender_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_marginEnd="15dp"
+                android:drawableEnd="@drawable/ic_right_arrow"
+                android:drawableTint="#C5C5C5"
+                android:fontFamily="@font/gilroy_bold"
+                android:gravity="center"
+                android:text=" "
+                android:textColor="@color/black_text_color1"
+                android:textSize="16sp" />
+        </FrameLayout>
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="15dp"
+            android:background="?android:attr/listDivider" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_marginStart="15dp"
+                android:drawableStart="@drawable/nights_stay"
+                android:drawableTint="@color/blue_color"
+                android:fontFamily="@font/gilroy_medium"
+                android:gravity="center"
+                android:text="  Dizayn"
+                android:textColor="@color/black_text_color1"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/profile_gender_tvva"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_marginEnd="15dp"
+                android:drawableEnd="@drawable/ic_right_arrow"
+                android:drawableTint="#C5C5C5"
+                android:fontFamily="@font/gilroy_bold"
+                android:gravity="center"
+                android:text=" "
+                android:textColor="@color/black_text_color1"
+                android:textSize="16sp" />
+        </FrameLayout>
+        <View
+            android:id="@+id/divider6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="15dp"
+            android:background="?android:attr/listDivider" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_marginStart="15dp"
+                android:drawableStart="@drawable/oferta"
+                android:drawableTint="@color/blue_color"
+                android:fontFamily="@font/gilroy_medium"
+                android:gravity="center"
+                android:text="  Ommaviy oferta"
+                android:textColor="@color/black_text_color1"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/profile_gender_tva"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_marginEnd="15dp"
+                android:drawableEnd="@drawable/ic_right_arrow"
+                android:drawableTint="#C5C5C5"
+                android:fontFamily="@font/gilroy_bold"
+                android:gravity="center"
+                android:text=" "
+                android:textColor="@color/black_text_color1"
+                android:textSize="16sp" />
+        </FrameLayout>
+        <View
+            android:id="@+id/divider5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="15dp"
+            android:background="?android:attr/listDivider" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_marginStart="15dp"
+                android:drawableStart="@drawable/ic_info_circle"
+                android:drawableTint="@color/blue_color"
+                android:fontFamily="@font/gilroy_medium"
+                android:gravity="center"
+                android:text="  Ilova haqida"
+                android:textColor="@color/black_text_color1"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/profile_gender_ta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_marginEnd="15dp"
+                android:drawableEnd="@drawable/ic_right_arrow"
+                android:drawableTint="#C5C5C5"
+                android:fontFamily="@font/gilroy_bold"
+                android:gravity="center"
+                android:text=" "
+                android:textColor="@color/black_text_color1"
+                android:textSize="16sp" />
+        </FrameLayout>
     </LinearLayout>
-
-
-
-    <TextView
-        android:id="@+id/logOut"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/background_btn_390_50"
-        android:drawableLeft="@drawable/ic_log_out"
-        android:fontFamily="@font/gilroy_medium"
-        android:gravity="center|start"
-        android:paddingStart="15dp"
-        android:text="   Log out"
-        android:textColor="@color/black_text_color1"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout7"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout7"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

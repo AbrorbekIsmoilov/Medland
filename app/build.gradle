@@ -118,4 +118,11 @@ dependencies {
 
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
 
+
+//    image radiud 360
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+
+    implementation 'com.github.AbhinavChauhan97:LoaderChip:1.0.4'
+
 }
